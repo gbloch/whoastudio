@@ -1,7 +1,55 @@
 %button {
-  @include button(simple, $base-accent-color);
+  border: none;
+  border-radius: $base-border-radius;
   -webkit-font-smoothing: antialiased;
   font-size: $base-font-size;
   font-weight: bold;
   line-height: 1em;
+  padding: .7em 1.5em;
 }
+
+%button-group {
+  $button-group-background: $base-body-color;
+  $button-group-color: lighten($base-font-color, 30);
+  $button-group-border-highlight: lighten($button-group-background, 15);
+  $button-group-active: $base-accent-color;
+  clear: both;
+
+  button,
+  .button {
+    @extend %button;
+    background-color: lighten($light-gray, 10%);
+    color: $light-gray;
+    display: block;
+    float: left;
+    font-size: $base-font-size;
+    font-weight: 400;
+    outline: none;
+
+    &.active {
+      background-color: #A9DE81;
+      color: darken(#A9DE81, 45%);
+    }
+
+    &.active:before {
+      content: "\f00c";
+      font-family: FontAwesome;
+      margin-right: 1em;
+    }
+
+    &:first-child {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+
+    &:last-child {
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+  }
+}
+
