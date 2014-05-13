@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/jasonramirez/wysiwyg-rails
-  revision: a744bf0e0321d1a93c222c7b42df82d844b866fc
+  revision: bbab0115b2667f4ec3457950fe0cc9942db71877
   specs:
     wysiwyg-rails (1.1.4)
       font-awesome-rails (= 4.0.3.1)
@@ -114,8 +114,8 @@ GEM
       bourbon (>= 3.1)
       sass (~> 3.2.19)
     newrelic_rpm (3.8.0.218)
-    nokogiri (1.6.1)
-      mini_portile (~> 0.5.0)
+    nokogiri (1.6.2)
+      mini_portile (~> 0.5.2)
     pg (0.17.1)
     polyglot (0.3.4)
     pry (0.9.12.6)
