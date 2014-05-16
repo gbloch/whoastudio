@@ -2,6 +2,8 @@
   %section
     %header
       %h1 Whoa
+      - @instagram.each do |instagram|
+        = image_tag instagram.images.standard_resolution.url
       %input{placeholder: "search", type: "text"}
   %section
     - @posts.each do |post|
