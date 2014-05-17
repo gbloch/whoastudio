@@ -1,0 +1,14 @@
+%h1 New Post
+= link_to 'New Post', new_admin_post_path
+%hr
+  %h1 All Posts
+  %table
+    %tr
+      %th Title
+      %th Text
+    - @posts.each do |post|
+      %tr
+        %td= post.title
+        %td= post.body
+        %td= link_to 'Edit', edit_admin_post_path(post)
+        %td= link_to 'Delete', admin_post_path(post), method: :delete, data: { confirm: 'Are you sure?' }

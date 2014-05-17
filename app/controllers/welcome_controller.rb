@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @posts = Posts.all
+    @posts = Post.all
   end
 end
