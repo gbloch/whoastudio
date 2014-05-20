@@ -1,10 +1,9 @@
 %main
-  %section
-    %header
-      %h1 Whoa
-      - @instagram.each do |instagram|
-        = image_tag instagram.images.standard_resolution.url
-      %input{placeholder: "search", type: "text"}
+  %section.hero-wrapper
+    %div.hero-image-wrapper
+      = image_tag @instagram, class: 'hero-image'
+    %object{data: "assets/whoa.svg", type: "image/svg+xml", class: 'logo'}
+    %input{placeholder: "search", type: "text"}
   %section
     - @posts.each do |post|
       %li= link_to post.title, '#'
