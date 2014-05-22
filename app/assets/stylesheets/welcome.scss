@@ -25,6 +25,29 @@
     width: 50%;
     z-index: 99;
   }
+
+  .posts {
+    max-width: 760px;
+    margin: 0 auto;
+
+    .title {
+      font-family: $serif;
+      margin-bottom: .5em;
+
+      a {
+        color: black;
+      }
+    }
+
+    li {
+      list-style-type: none;
+      padding: 6em 0;
+    }
+
+    li + li {
+      border-top: solid 1px $light-gray;
+    }
+  }
 }
 
 .whoa-logo-letter {
