@@ -1,0 +1,15 @@
+.posts-show {
+  max-width: 760px;
+  margin: 0 auto;
+
+  .title {
+    font-size: 6rem;
+    font-family: $serif;
+    margin: .5em 0 .25em;
+    width: 100%;
+  }
+
+  .body {
+    line-height: 2rem;
+  }
+}
