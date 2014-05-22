@@ -1,9 +1,13 @@
+%svg
+  %filter#blur
+    %feGaussianBlur{:stdDeviation => "2"}/
+
 %main
   %section.hero-wrapper
     %div.hero-image-wrapper
       = image_tag @instagram, class: 'hero-image'
     %object{data: "assets/whoa.svg", type: "image/svg+xml", class: 'logo'}
-    %input{placeholder: "search", type: "text"}
+    %input{placeHolder: "search", type: "text"}
   %section
     - @posts.each do |post|
       %li= link_to post.title, '#'

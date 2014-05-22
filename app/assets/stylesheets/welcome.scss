@@ -12,7 +12,8 @@
 
   .hero-image {
     @include position(absolute, 0px 0px 0 0);
-    @include filter(blur(10px));
+    @include filter(blur(10px) brightness(.9));
+    filter: url(darken_blur.svg#darken_blur);
     max-width: none;
     min-height: 110vh;
     min-width: 110vw;
