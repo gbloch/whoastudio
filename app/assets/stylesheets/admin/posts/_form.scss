@@ -20,9 +20,10 @@
       line-height: 2rem;
     }
   }
+}
 
-  .status {
-    @extend %button-group;
-    margin-bottom: 2em;
-  }
+.status {
+  @extend %button-group;
+  float: right;
+  margin-bottom: 2em;
 }

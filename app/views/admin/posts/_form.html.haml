@@ -1,7 +1,10 @@
-%section.post-form-wrapper
+%header
+  %button.submit Save
   .status
     %button.active Publish
     %button Draft
+
+%section.post-form-wrapper
   = simple_form_for [:admin, @post] do |f|
     = f.input :status, as: :hidden
     = f.input :title, label: false, input_html: { class: 'title' }
