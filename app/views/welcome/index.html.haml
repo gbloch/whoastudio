@@ -1,10 +1,14 @@
 %main
   %section.hero-wrapper
-    %div.hero-image-wrapper
+    .hero-image-wrapper
       = image_tag @instagram, class: 'hero-image'
-    %object{data: "assets/whoa.svg", type: "image/svg+xml", class: 'logo'}
-    %input{placeHolder: "search", type: "text"}
-    
+
+    .hero-intro
+      %object{data: "assets/whoa.svg", type: "image/svg+xml", class: 'logo'}
+      .hero-text Design Experiments &amp; Findings
+      %form
+        %input{type: "text"}
+
   %section.posts
     %ul
     - @posts.each do |post|
