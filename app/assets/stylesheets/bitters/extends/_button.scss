@@ -1,11 +1,17 @@
 %button {
-  border: none;
+  background-color: $base-button-color;
   border-radius: $base-border-radius;
-  -webkit-font-smoothing: antialiased;
+  border: none;
+  color: white;
+  display: inline-block; 
   font-size: $base-font-size;
-  font-weight: bold;
-  line-height: 1em;
-  padding: .5em 1em;
+  line-height: 1;
+  padding: .5em 1em .45em;
+
+  &:hover {
+    background-color: darken($base-button-color, 10);
+    color: white;
+  }
 }
 
 %button.secondary {

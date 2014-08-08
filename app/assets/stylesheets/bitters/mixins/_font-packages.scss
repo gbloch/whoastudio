@@ -1,0 +1,9 @@
+@mixin font-package($usage) {
+  
+  @if( $usage == "reading" ) {
+    color: $secondary-font-color ;
+    font-family: $base-font-family;
+    font-weight: light;
+    font-size: $base-font-size * 1.25;
+  }
+}

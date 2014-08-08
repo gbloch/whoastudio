@@ -14,11 +14,12 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: $base-font-size * 2.25; // 16 * 2.25 = 36px
-  line-height: 1.25em;
+  line-height: 1.25;
 }
 
 h2 {
   font-size: $base-font-size * 2; // 16 * 2 = 32px
+  line-height: 1;
 }
 
 h3 {
@@ -39,6 +40,7 @@ h6 {
 
 p {
   margin: 0 0 ($base-line-height * .5);
+  line-height: $base-line-height;
 }
 
 a {
