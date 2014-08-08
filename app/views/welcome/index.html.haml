@@ -5,7 +5,8 @@
 
     .hero-intro
       %object{data: "assets/whoa.svg", type: "image/svg+xml", class: 'logo'}
-      .hero-text Design Experiments &amp; Findings
+      %span.hero-text 
+        Design Experiments &amp; Findings
       %form
         %input{type: "text"}
 
@@ -13,6 +14,9 @@
     %ul
     - @posts.each do |post|
       %li
-        %h2.title
-          = link_to post.title, post
-        = strip_tags(post.body.truncate(50))
+        %article
+          %h2.title
+            = link_to post.title, post
+          = strip_tags(post.body.truncate(350))
+          = link_to post, class: "read-more" do
+            read more
