@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20140513010343) do
 
   create_table "posts", force: true do |t|
     t.string "status"
-    t.string "title"
+    t.text   "title"
     t.text   "body"
   end
 

@@ -1,5 +1,9 @@
 .welcome-index {
 
+  .whoa-logo-letter {
+    fill: white;
+  }
+
   .hero-wrapper {
     @include size(100vw 100vh);
     @include display(flex);
@@ -87,7 +91,7 @@
 }
 
 section.posts {
-  max-width: em(680);
+  max-width: $medium-screen;
   margin: 4em auto;
 
   .title {
@@ -109,6 +113,3 @@ section.posts {
   }
 }
 
-.whoa-logo-letter {
-  fill: white;
-}

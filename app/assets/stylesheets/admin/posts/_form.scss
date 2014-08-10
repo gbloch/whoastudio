@@ -1,27 +1,3 @@
-.post-form-wrapper {
-  max-width: 860px;
-  margin: 0 auto;
-
-  input.title {
-    border: none;
-    font-size: 6rem;
-    font-family: $serif;
-    margin-bottom: 0em;
-    padding: 0em;
-    width: 100%;
-  }
-
-  .froala-box {
-    border: none;
-    font-family: $serif-2;
-    font-size: 1rem;
-
-    .froala-element {
-      line-height: 2rem;
-    }
-  }
-}
-
 .status {
   @extend %button-group;
   float: right;

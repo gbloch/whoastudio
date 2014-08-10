@@ -1,0 +1,39 @@
+.post {
+  position: relative;
+  max-width: $medium-screen;
+  margin: 0 auto;
+
+  span.title {
+    @include position(absolute, 0px null null 0px);
+    // to offset div and textarea wrapping issue
+    padding-right: .125em; 
+  }
+
+  .title {
+    border: none;
+    font-family: $serif;
+    font-size: 5rem;
+    font-weight: 300;
+    line-height: 1.15;
+    margin: .5em 0;
+    overflow: hidden;
+    padding: 0em;
+    resize: none;
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  .body,
+  .froala-box {
+    border: none;
+    line-height: 2;
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: $serif;
+      font-style: italic;
+    }
+  }
+}
