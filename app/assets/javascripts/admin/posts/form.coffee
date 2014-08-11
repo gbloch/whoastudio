@@ -30,8 +30,9 @@ class AutoSizingTextarea
   resize: ->
     @span.html(@textarea.val())
     height = @span.outerHeight()
-    @textarea.height(height)
-    @textarea.scrollTop(0)
+    if height >= 92
+      @textarea.height(height)
+      @textarea.scrollTop(0)
    
 $ ->
   if $(".admin-posts").length > 0

@@ -18,6 +18,8 @@ module Whoastudio
     config.i18n.enforce_available_locales = true
 
     config.active_record.default_timezone = :utc
+    config.assets.initialize_on_precompile = false
+    config.serve_static_assets = true
 
     config.generators do |generate|
       generate.helper false

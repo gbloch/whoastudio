@@ -1,10 +1,10 @@
 %main
   %section.hero-wrapper
     .hero-image-wrapper
-      = image_tag @instagram, class: 'hero-image'
+      = image_tag @instagram, class: "hero-image"
 
     .hero-intro
-      %object{data: "assets/whoa.svg", type: "image/svg+xml", class: 'logo'}
+      = image_tag "whoa.svg", class: "logo"
       %span.hero-text 
         Design Experiments &amp; Findings
       %form

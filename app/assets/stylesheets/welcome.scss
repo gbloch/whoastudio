@@ -1,9 +1,5 @@
 .welcome-index {
 
-  .whoa-logo-letter {
-    fill: white;
-  }
-
   .hero-wrapper {
     @include size(100vw 100vh);
     @include display(flex);
@@ -20,7 +16,7 @@
   .hero-image {
     @include position(absolute, 0px 0px 0 0);
     @include filter(blur(4px) brightness(.9));
-    filter: url(welcome_image.svg#welcome_image);
+    filter: image-url("welcome_image.svg#welcome_image");
     max-width: none;
     min-height: 110vh;
     min-width: 110vw;
@@ -57,7 +53,7 @@
     input[type="text"] {
       @include transition(all .5s ease);
       background-color: rgba($green, .7);
-      background-image: asset-url('magnifying-glass.svg');
+      background-image: image-url('magnifying-glass.svg');
       background-position: 1em 1em;
       background-repeat: no-repeat;
       background-size: 1.25em;
@@ -112,4 +108,3 @@ section.posts {
     border-top: solid 1px $light-gray;
   }
 }
-
