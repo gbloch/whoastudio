@@ -5,9 +5,9 @@
     %button Draft
 
 %article.post
-  = simple_form_for [:admin, @post] do |f|
+  = simple_form_for [:admins, @post] do |f|
     = f.input :status, as: :hidden
     = f.input :title, label: false, input_html: { class: 'title' }
     = f.input :body, label: false, input_html: { class: 'wysiwyg' }
     = f.button :submit
-  = link_to 'Back', admin_posts_path
+  = link_to 'Back', admins_posts_path

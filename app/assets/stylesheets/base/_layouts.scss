@@ -2,3 +2,20 @@ body, html {
   padding: 0px;
   margin: 0px;
 }
+
+main {
+}
+
+#admin {
+  @include transition(all .5s ease);
+
+  &.expanded {
+    padding-left: $admin-nav-width;
+  }
+
+  main {
+    margin: 0 auto;
+    max-width: em(760);
+    padding: 2em 5em;
+  }
+}

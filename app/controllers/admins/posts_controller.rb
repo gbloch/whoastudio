@@ -12,7 +12,7 @@ class Admins::PostsController < AdminsController
     
     if @post.save
       #redirect_to [ @post] 
-      redirect_to admin_posts_path
+      redirect_to admins_posts_path
     else
       render 'new'
     end
@@ -26,7 +26,7 @@ class Admins::PostsController < AdminsController
     @post = Post.find(params[:id])
    
     if @post.update(post_params)
-      redirect_to admin_posts_path
+      redirect_to admins_posts_path
     else
       render 'edit'
     end
@@ -36,7 +36,7 @@ class Admins::PostsController < AdminsController
     @post = Post.find(params[:id])
     @post.destroy
     
-    redirect_to admin_posts_path 
+    redirect_to admins_posts_path 
   end
 
   private
