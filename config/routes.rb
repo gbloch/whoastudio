@@ -1,14 +1,12 @@
 Rails.application.routes.draw do
 
+  devise_for :admins
   root to: "welcome#index"
 
   resources :posts, only: [:show]
 
-  namespace :admin do
-
-    root to: "sessions#new"
-
-    get "sign_in", to: "sessions#new"
+  namespace :admins do
+    root to: "posts#index"
 
     resources :posts
   end
