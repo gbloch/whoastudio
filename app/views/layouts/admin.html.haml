@@ -7,8 +7,8 @@
       = "#{title} | Admin"
     = stylesheet_link_tag :application, media: 'all'
     = csrf_meta_tags
-  %body{class: body_class}
+  %body#admin{class: [body_class, @navigation_state].join(' ') }
     = render 'flashes'
-    = render 'admins/navigation'
+    = render 'admins/navigation' 
     = yield
     = render 'javascript'

@@ -1,0 +1,30 @@
+body#admin {
+
+  .hamburger-icon {
+    @include transition(all .5s ease);
+    @include position(fixed, 1em null null 1em);
+    @include size(em(40));
+    background: black;
+    display: block;
+    z-index: 99;
+
+    &.expanded {
+      @include transform(rotate(90deg));
+    }
+  }
+  
+  nav {
+    @include transition(all .5s ease);
+    @include position(fixed, em(0) null em(0) null);
+    background: white;
+    box-shadow: 0 0 20px rgba(black, .25);
+    padding: 5em 1em;
+    left: -($admin-nav-width + em(20));
+    width: $admin-nav-width;
+    z-index: 98;
+
+    &.expanded {
+      left: em(0);
+    }
+  }
+}
