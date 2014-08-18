@@ -2,13 +2,14 @@
  *= require froala_editor.min.css
  */
 
-@charset 'utf-8';
+@charset "utf-8";
 
-@import 'bourbon';
-@import 'neat';
-@import 'font-awesome';
-@import 'base/base';
+@import "bourbon";
+@import "neat";
+@import "font-awesome";
+@import "base/base";
+@import "animations/base";
 
-@import 'admin/base';
-@import 'components/base';
-@import 'welcome';
+@import "admin/base";
+@import "components/base";
+@import "welcome";

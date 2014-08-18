@@ -1,0 +1,14 @@
+@include keyframes(flash) {
+  from {
+    top: -5em;
+  }
+  15% {
+    top: 0em;
+  }
+  85% {
+    top: 0em;
+  }
+  to {
+    top: -5em;
+  }
+}

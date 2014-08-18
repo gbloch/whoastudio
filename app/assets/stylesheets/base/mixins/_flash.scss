@@ -1,9 +1,13 @@
 @mixin flash($color) {
+  @include animation(flash 3s ease);
+  @include position(fixed, -5em 0px null 0px);
   background: $color;
-  color: darken($color, 60);
+  box-shadow: 0 0 2em rgba(black, .25);
+  color: darken($color, 30);
   font-weight: bold;
-  margin-bottom: $base-line-height / 2;
-  padding: $base-line-height / 2;
+  text-align: center;
+  padding: $base-flash-padding;
+  z-index: 101;
 
   a {
     color: darken($color, 70);
