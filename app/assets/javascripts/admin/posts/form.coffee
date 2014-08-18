@@ -30,7 +30,7 @@ class AutoSizingTextarea
   resize: ->
     @span.html(@textarea.val())
     height = @span.outerHeight()
-    if height >= 92
+    if height >= 82
       @textarea.height(height)
       @textarea.scrollTop(0)
    

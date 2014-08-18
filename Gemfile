@@ -24,7 +24,7 @@ gem 'simple_form'
 gem 'title'
 gem 'uglifier'
 gem 'unicorn'
-gem 'wysiwyg-rails', :git => 'git://github.com/jasonramirez/wysiwyg-rails'
+gem 'wysiwyg-rails' 
 
 group :development do
   gem 'foreman'
