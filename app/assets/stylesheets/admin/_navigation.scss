@@ -2,10 +2,9 @@ body#admin {
 
   .hamburger-icon {
     @include transition(all .5s ease);
-    @include position(fixed, 1em null null 1em);
-    @include size(em(40));
-    background: black;
-    display: block;
+    @include position(fixed, .25em null null .5em);
+    color: black;
+    font-size: 1.5em;
     z-index: 99;
 
     &.expanded {
