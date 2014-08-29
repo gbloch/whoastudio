@@ -1,0 +1,2 @@
+class @Whoa
+new Whoa()
