@@ -1,2 +1,0 @@
-class @Whoa
-new Whoa()

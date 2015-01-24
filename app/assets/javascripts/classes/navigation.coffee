@@ -1,16 +1,16 @@
-class AdminNavigation
-  constructor: ->
-    @adminBody = $("#admin")
+class Navigation
+  constructor: (selector) ->
     @csrfToken = $("meta[name='csrf-token']").attr("content")
-    @navigationTrigger = $(".hamburger-icon")
-    @sideNavigation = $(".side-navigation")
+
+    @navigation = $(selector)
+    @navigationTrigger = @navigation.find(".navigation__trigger")
+    @navigationDrawer = @navigation.find(".navigation__drawer")
     @_bindEvents()
 
   _bindEvents: ->
     @navigationTrigger.on "click", =>
       @navigationTrigger.toggleClass "expanded"
-      @sideNavigation.toggleClass "expanded"
-      @adminBody.toggleClass "expanded"
+      @navigationDrawer.toggleClass "expanded"
       @_setSession()
 
   _setSession: ->
@@ -28,6 +28,5 @@ class AdminNavigation
       beforeSend: (xhr) ->
         xhr.setRequestHeader('X-CSRF-Token', @csrfToken)
 
-if $("#admin").length > 0
-  new AdminNavigation()
-
+$ ->
+  new Navigation(".navigation")

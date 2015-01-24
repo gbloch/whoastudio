@@ -1,4 +1,4 @@
-class @Wysiwyg extends Whoa
+class Wysiwyg
   constructor: (element, buttons) ->
     @element = $(element)
     @buttons = buttons

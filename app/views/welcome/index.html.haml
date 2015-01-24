@@ -1,14 +1,11 @@
 %main
-  %section.hero-wrapper
-    .hero-image-wrapper
-      = image_tag @instagram, class: "hero-image"
-
+  .layout-hero--cover
     .hero-intro
       = image_tag "whoa.svg", class: "logo"
       %span.hero-text 
         Design Experiments &amp; Findings
       %form
-        %input{type: "text"}
+        %input.hero-search{ type: "text" }
 
   %section.posts
     %ul

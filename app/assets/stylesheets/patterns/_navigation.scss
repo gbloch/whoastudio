@@ -1,0 +1,30 @@
+.navigation__drawer {
+  @include transition(all .5s ease);
+  @include position(fixed, em(0) null em(0) null);
+  background: rgba(black, 0.8);
+  padding: 5em 1em;
+  left: -50%;
+  min-width: $admin-nav-width;
+  width: 50%;
+  z-index: 2;
+
+  &.expanded {
+    left: em(0);
+  }
+}
+
+.navigation__trigger {
+  @include transition(all .5s ease);
+  @include position(fixed, .25em null null .5em);
+  color: black;
+  font-size: 1.5em;
+  z-index: 99;
+
+  &.expanded {
+    @include transform(rotate(90deg));
+  }
+}
+
+.navigation__link {
+  color: white;
+}

@@ -1,4 +1,4 @@
-class @AutoSizingTextarea extends Whoa
+class AutoSizingTextarea
   constructor: (element) ->
     @textarea = $(element)
     @span = $("<span>")

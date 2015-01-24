@@ -10,7 +10,6 @@ class WelcomePageBackgroundImage
 
   _centerImage: ->
     top = @_getTop()
-    console.log top
     @image.css("top": -top)
 
   _getTop: =>

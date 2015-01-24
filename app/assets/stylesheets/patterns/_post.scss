@@ -1,3 +1,26 @@
+.posts {
+  max-width: $medium-screen;
+  margin: 4em auto;
+
+  .title {
+    font-family: $serif;
+    margin-bottom: .5em;
+
+    a {
+      color: black;
+    }
+  }
+
+  li {
+    list-style-type: none;
+    padding: 4em 0;
+  }
+
+  li + li {
+    border-top: solid 1px $light-gray;
+  }
+}
+
 .post {
   position: relative;
   max-width: $medium-screen;
@@ -5,7 +28,6 @@
 
   span.title {
     @include position(absolute, 0px null null 0px);
-    // to offset div and textarea wrapping issue
     padding-right: .125em; 
   }
 
