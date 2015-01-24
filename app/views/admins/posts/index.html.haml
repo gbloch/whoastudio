@@ -1,23 +1,25 @@
-%main
+%main.layout--medium
   %h1 New Post
   = link_to 'New Post', new_admins_post_path
   %hr
   %h1 All Posts
-  %table
+  %table.post-table
     %tr
-      %th Title
-      %th Published
-      %th
-      %th
+      %th.post-table__col
+        Title
+      %th.post-table__col
+        Published
+      %th.post-table__col
+      %th.post-table__col
     - @posts.each do |post|
       %tr
-        %td
+        %td.post-table__col
           = post.title
-        %td 
+        %td.post-table__col
           = post.published
-        %td
+        %td.post-table__col
           = link_to 'Edit', edit_admins_post_path(post)
-        %td
+        %td.post-table__col
           = link_to 'Delete', admins_post_path(post),
             method: :delete,
             data: { confirm: 'Are you sure?' }

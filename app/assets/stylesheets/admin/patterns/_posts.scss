@@ -1,0 +1,15 @@
+.post-table {
+  width: 100%;
+}
+
+.post-table__col {
+  &:nth-of-type(2) {
+    text-align: center;
+    width: 20%;
+  }
+
+  &:nth-of-type(3),
+  &:nth-of-type(4) {
+    width: 10%;
+  }
+}
