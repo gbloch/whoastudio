@@ -1,4 +1,4 @@
-class AutoSizingTextarea
+class @AutoSizingTextarea
   constructor: (element) ->
     @textarea = $(element)
     @span = $("<span>")

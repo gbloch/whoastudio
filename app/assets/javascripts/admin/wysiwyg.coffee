@@ -1,4 +1,4 @@
-class Wysiwyg
+class @Wysiwyg
   constructor: (element, buttons) ->
     @element = $(element)
     @buttons = buttons

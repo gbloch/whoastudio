@@ -1,7 +1,7 @@
-%header
-  %a{class: "hamburger-icon #{@navigation_state}", href: "#"}
-    %i.fa.fa-navicon    
-  %nav.side-navigation{class: @navigation_state}
+%header.navigation
+  %a{class: "navigation__trigger #{@navigation_state}", href: "#"}
+    %i.fa.fa-plus
+  %nav.navigation__drawer{ class: @navigation_state }
     %ul
       %li
         = link_to('Logout', destroy_admin_session_path, method: :delete)
