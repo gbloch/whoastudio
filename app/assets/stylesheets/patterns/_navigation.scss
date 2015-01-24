@@ -16,9 +16,13 @@
 .navigation__trigger {
   @include transition(all .5s ease);
   @include position(fixed, .25em null null .5em);
-  color: black;
+  color: white;
   font-size: 1.5em;
   z-index: 99;
+
+  &:hover {
+    color: $purple;
+  }
 
   &.expanded {
     @include transform(rotate(90deg));
