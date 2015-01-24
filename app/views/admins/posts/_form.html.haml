@@ -1,12 +1,17 @@
-%main
+%main.layout--medium
   .post
     %header
+      = link_to "All Posts", admins_posts_path
     %article
       = simple_form_for [:admins, @post] do |f|
-        = f.button :submit
         = f.input :published, as: :select
         = f.input :status, as: :hidden
-        = f.input :title, label: false, input_html: { class: 'title' }
-        = f.input :body, label: false, input_html: { class: 'wysiwyg' }
-        = f.button :submit
-      = link_to 'Back', admins_posts_path
+        = f.input :title,
+          label: false,
+          input_html: { class: "post__title" }
+        = f.input :body,
+          label: false,
+          input_html: { class: "wysiwyg" }
+        = f.button :submit,
+          class: "button--primary"
+      = link_to "All Posts", admins_posts_path

@@ -10,15 +10,13 @@
       %th.post-table__col
         Published
       %th.post-table__col
-      %th.post-table__col
     - @posts.each do |post|
       %tr
         %td.post-table__col
-          = post.title
+          = link_to edit_admins_post_path(post) do
+            = post.title
         %td.post-table__col
           = post.published
-        %td.post-table__col
-          = link_to 'Edit', edit_admins_post_path(post)
         %td.post-table__col
           = link_to 'Delete', admins_post_path(post),
             method: :delete,

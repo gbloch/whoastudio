@@ -26,50 +26,47 @@
   max-width: $medium-screen;
   margin: 0 auto;
 
-  span.title {
-    @include position(absolute, 0px null null 0px);
-    padding-right: .125em; 
-  }
+}
 
-  .title {
-    border: none;
-    font-family: $serif;
-    font-size: 4.5rem;
-    font-weight: 300;
-    line-height: 1.15;
-    margin: .5em 0;
-    overflow: hidden;
+.post__title {
+  border: none;
+  font-family: $serif;
+  font-size: 4.5rem;
+  font-weight: 300;
+  line-height: 1.15;
+  margin: .5em 0;
+  overflow: hidden;
+  padding: 0em;
+  resize: none;
+  width: 100%;
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.post__body,
+.froala-box {
+  border: none;
+  line-height: 2;
+  padding: 1em;
+
+  @include media($medium-screen){
     padding: 0em;
-    resize: none;
+  } 
 
-    &:focus {
-      box-shadow: none;
-      outline: none;
-    }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $serif;
+    font-style: italic;
   }
 
-  .body,
-  .froala-box {
-    border: none;
-    line-height: 2;
-    padding: 1em;
-
-    @include media($medium-screen){
-      padding: 0em;
-    } 
-
-    h1, h2, h3, h4, h5, h6 {
-      font-family: $serif;
-      font-style: italic;
-    }
-
-    pre {
-      background: #444;
-      border-radius: 4px;
-      color: lighten($yellow, 20);
-      padding: 2em;
-      overflow-x: auto;
-      word-break: break-all;
-    }
+  pre {
+    background: #444;
+    border-radius: 4px;
+    color: lighten($yellow, 20);
+    padding: 2em;
+    overflow-x: auto;
+    word-break: break-all;
   }
 }
