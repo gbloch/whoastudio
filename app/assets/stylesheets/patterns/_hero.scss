@@ -28,7 +28,7 @@
 .hero-search {
   @include size(3em);
   @include transition(all .5s ease);
-  background-color: rgba(white, 0.2);
+  background-color: rgba(black, 0.2);
   background-image: image-url('magnifying-glass.svg');
   background-position: 1em 1em;
   background-repeat: no-repeat;

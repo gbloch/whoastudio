@@ -8,7 +8,8 @@ class Navigation
     @_bindEvents()
 
   _bindEvents: ->
-    @navigationTrigger.on "click", =>
+    @navigationTrigger.on "click", (event) =>
+      event.preventDefault()
       @navigationTrigger.toggleClass "expanded"
       @navigationDrawer.toggleClass "expanded"
       @_setSession()

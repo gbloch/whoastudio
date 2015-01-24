@@ -19,10 +19,10 @@ $base-border-radius: em(3);
 // Colors
 $blue: #55B3ED;
 $dark-gray: #333;
-$purple: #DB29F2;
+$purple: #b630e4;
 $medium-gray: #999;
 $light-gray: #DDD;
-$red: #FF003A;
+$red: #ED3B3B;
 $yellow: #FFF24A;
 $green: #A2E05E;
 
@@ -45,7 +45,7 @@ $success-color: $green;
 // Font Colors
 $base-font-color: $dark-gray;
 $secondary-font-color: lighten($dark-gray, 25);
-$base-accent-color: $blue;
+$base-accent-color: $purple;
 
 // Text Link Colors
 $base-link-color: $base-accent-color;
