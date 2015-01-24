@@ -11,7 +11,6 @@ class Admins::PostsController < AdminsController
     @post = Post.new(post_params)
     
     if @post.save
-      #redirect_to [ @post] 
       redirect_to admins_posts_path
     else
       render 'new'
@@ -42,6 +41,6 @@ class Admins::PostsController < AdminsController
   private
 
   def post_params
-    params.require(:post).permit(:status, :title, :body) 
+    params.require(:post).permit(:status, :title, :body, :published) 
   end
 end

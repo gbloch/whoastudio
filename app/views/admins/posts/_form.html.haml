@@ -1,15 +1,10 @@
 %main
   .post
     %header
-      %button.submit 
-        Save
-      .status
-        %button.active 
-          Publish
-        %button 
-          Draft
     %article
       = simple_form_for [:admins, @post] do |f|
+        = f.button :submit
+        = f.input :published, as: :select
         = f.input :status, as: :hidden
         = f.input :title, label: false, input_html: { class: 'title' }
         = f.input :body, label: false, input_html: { class: 'wysiwyg' }
