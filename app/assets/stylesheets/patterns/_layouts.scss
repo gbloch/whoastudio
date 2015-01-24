@@ -12,3 +12,9 @@ body, html {
   position: relative;
   background-color: $hero-background-color;
 }
+
+.layout--medium {
+  margin: 0 auto;
+  max-width: $medium-screen;
+  padding: 6em 1em;
+}
