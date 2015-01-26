@@ -1,4 +1,4 @@
-.posts {
+.posts--list {
   max-width: $medium-screen;
   margin: 4em auto;
 
@@ -31,7 +31,6 @@
 }
 
 .post__body {
-  line-height: 2;
   padding: 0 1rem;
 
   @include media($medium-screen){
