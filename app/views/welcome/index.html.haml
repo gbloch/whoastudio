@@ -12,8 +12,9 @@
     - @posts.each do |post|
       %li
         %article
-          %h2.title
-            = link_to post.title, post
+          = link_to post, class: "post__title" do
+            %h2 
+              = post.title
           = strip_tags(post.body.truncate(350))
           = link_to post, class: "read-more" do
             read more

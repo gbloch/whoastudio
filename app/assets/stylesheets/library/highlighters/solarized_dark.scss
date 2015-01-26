@@ -1,0 +1,204 @@
+//colors
+$color_daintree_approx: #002b36;
+$color_regent_gray_approx: #839496;
+$color_shuttle_gray_approx: #586e75;
+$color_limeade_approx: #859900;
+$color_jungle_green_approx: #2aa198;
+$color_curious_blue_approx: #268bd2;
+$color_hot_toddy_approx: #b58900;
+$color_orange_roughy_approx: #cb4b16;
+$color_alizarin_crimson_approx: #dc322f;
+$color_blue_marguerite_approx: #6c71c4;
+$color_cyprus_approx: #073642;
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: $color_daintree_approx;
+  color: $color_regent_gray_approx;
+}
+.hljs-comment {
+  color: $color_shuttle_gray_approx;
+}
+.diff {
+  .hljs-header {
+    color: $color_shuttle_gray_approx;
+  }
+  .hljs-change {
+    color: $color_orange_roughy_approx;
+  }
+}
+.hljs-doctype {
+  color: $color_shuttle_gray_approx;
+}
+.hljs-pi {
+  color: $color_shuttle_gray_approx;
+}
+.lisp {
+  .hljs-string {
+    color: $color_shuttle_gray_approx;
+  }
+  .hljs-body {
+    color: $color_hot_toddy_approx;
+  }
+}
+.hljs-javadoc {
+  color: $color_shuttle_gray_approx;
+}
+.hljs-keyword {
+  color: $color_limeade_approx;
+}
+.hljs-winutils {
+  color: $color_limeade_approx;
+}
+.method {
+  color: $color_limeade_approx;
+}
+.hljs-addition {
+  color: $color_limeade_approx;
+}
+.css {
+  .hljs-tag {
+    color: $color_limeade_approx;
+  }
+  .hljs-function {
+    color: $color_curious_blue_approx;
+  }
+  .hljs-pseudo {
+    color: $color_orange_roughy_approx;
+  }
+}
+.hljs-request {
+  color: $color_limeade_approx;
+}
+.hljs-status {
+  color: $color_limeade_approx;
+}
+.hljs-number {
+  color: $color_jungle_green_approx;
+}
+.hljs-command {
+  color: $color_jungle_green_approx;
+}
+.hljs-string {
+  color: $color_jungle_green_approx;
+}
+.hljs-phpdoc {
+  color: $color_jungle_green_approx;
+}
+.hljs-dartdoc {
+  color: $color_jungle_green_approx;
+}
+.hljs-regexp {
+  color: $color_jungle_green_approx;
+}
+.hljs-hexcolor {
+  color: $color_jungle_green_approx;
+}
+.hljs-link_url {
+  color: $color_jungle_green_approx;
+}
+.hljs-title {
+  color: $color_curious_blue_approx;
+}
+.hljs-localvars {
+  color: $color_curious_blue_approx;
+}
+.hljs-chunk {
+  color: $color_curious_blue_approx;
+}
+.hljs-decorator {
+  color: $color_curious_blue_approx;
+}
+.hljs-built_in {
+  color: $color_curious_blue_approx;
+}
+.hljs-identifier {
+  color: $color_curious_blue_approx;
+}
+.hljs-id {
+  color: $color_curious_blue_approx;
+}
+.hljs-attribute {
+  color: $color_hot_toddy_approx;
+}
+.hljs-variable {
+  color: $color_hot_toddy_approx;
+}
+.hljs-constant {
+  color: $color_hot_toddy_approx;
+}
+.hljs-parent {
+  color: $color_hot_toddy_approx;
+}
+.hljs-type {
+  color: $color_hot_toddy_approx;
+}
+.hljs-link_reference {
+  color: $color_hot_toddy_approx;
+}
+.hljs-preprocessor {
+  color: $color_orange_roughy_approx;
+  .hljs-keyword {
+    color: $color_orange_roughy_approx;
+  }
+}
+.hljs-pragma {
+  color: $color_orange_roughy_approx;
+}
+.hljs-shebang {
+  color: $color_orange_roughy_approx;
+}
+.hljs-symbol {
+  color: $color_orange_roughy_approx;
+  .hljs-string {
+    color: $color_orange_roughy_approx;
+  }
+}
+.hljs-special {
+  color: $color_orange_roughy_approx;
+}
+.hljs-attr_selector {
+  color: $color_orange_roughy_approx;
+}
+.hljs-subst {
+  color: $color_orange_roughy_approx;
+}
+.hljs-cdata {
+  color: $color_orange_roughy_approx;
+}
+.hljs-header {
+  color: $color_orange_roughy_approx;
+}
+.hljs-deletion {
+  color: $color_alizarin_crimson_approx;
+}
+.hljs-important {
+  color: $color_alizarin_crimson_approx;
+}
+.hljs-link_label {
+  color: $color_blue_marguerite_approx;
+}
+.nginx .hljs-title {
+  color: $color_limeade_approx;
+}
+.hljs-tag .hljs-value {
+  color: $color_jungle_green_approx;
+}
+.hljs-rules .hljs-value {
+  color: $color_jungle_green_approx;
+}
+.tex .hljs-formula {
+  color: $color_jungle_green_approx;
+  background: $color_cyprus_approx;
+}
+.vhdl .hljs-literal {
+  color: $color_curious_blue_approx;
+}
+.smalltalk .hljs-number {
+  color: $color_hot_toddy_approx;
+}
+.hljs-class .hljs-title {
+  color: $color_hot_toddy_approx;
+}

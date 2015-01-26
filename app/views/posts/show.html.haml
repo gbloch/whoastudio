@@ -1,5 +1,5 @@
 %article.post
-  %h1.post__title
+  %h1.post__title.post__title--large
     = @post.title
   .post__body
-    = @post.body.html_safe
+    = parse(@post.body)

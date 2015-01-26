@@ -1,14 +1,3 @@
-// Neat Settings -- uncomment if using Neat
-@import "neat-helpers";
-@import "grid-settings";
-
 @import "variables";
-@import "extends/base";
 @import "mixins/base";
-
-@import "flashes";
-// @import "forms";
-// @import "layouts";
-@import "lists";
-@import "tables";
-@import "typography";
+@import "font-faces";

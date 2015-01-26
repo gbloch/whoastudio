@@ -25,7 +25,7 @@ class Admins::PostsController < AdminsController
     @post = Post.find(params[:id])
    
     if @post.update(post_params)
-      redirect_to admins_posts_path
+      redirect_to :back
     else
       render 'edit'
     end
@@ -41,6 +41,6 @@ class Admins::PostsController < AdminsController
   private
 
   def post_params
-    params.require(:post).permit(:status, :title, :body, :published) 
+    params.require(:post).permit(:title, :body, :published) 
   end
 end

@@ -13,3 +13,19 @@
     width: 10%;
   }
 }
+
+.post__title--admin {
+  line-height: 1.7;
+  font-size: $base-font-size;
+  border: solid 1px $light-gray;
+  min-height: em(50);
+  width: 100%;
+}
+
+.post__body--admin {
+  font-size: $base-font-size;
+  border: solid 1px $light-gray;
+  min-height: em(600);
+  width: 100%;
+  line-height: 1.7;
+}

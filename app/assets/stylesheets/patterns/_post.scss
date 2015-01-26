@@ -2,15 +2,6 @@
   max-width: $medium-screen;
   margin: 4em auto;
 
-  .title {
-    font-family: $serif;
-    margin-bottom: .5em;
-
-    a {
-      color: black;
-    }
-  }
-
   li {
     list-style-type: none;
     padding: 4em 0;
@@ -25,35 +16,26 @@
   position: relative;
   max-width: $medium-screen;
   margin: 0 auto;
-
 }
 
 .post__title {
-  border: none;
-  font-family: $serif;
-  font-size: 4.5rem;
-  font-weight: 300;
-  line-height: 1.15;
-  margin: .5em 0;
-  overflow: hidden;
-  padding: 0em;
-  resize: none;
+  color: $base-font-color;
+  font-family: $sans-serif;
+  line-height: 1;
   width: 100%;
-
-  &:focus {
-    box-shadow: none;
-    outline: none;
-  }
 }
 
-.post__body,
-.froala-box {
-  border: none;
+.post__title--large {
+  font-size: 4.5rem;
+  letter-spacing: -0.25rem;
+}
+
+.post__body {
   line-height: 2;
-  padding: 1em;
+  padding: 0 1rem;
 
   @include media($medium-screen){
-    padding: 0em;
+    padding: 0rem;
   } 
 
   h1, h2, h3, h4, h5, h6 {
@@ -61,12 +43,11 @@
     font-style: italic;
   }
 
-  pre {
-    background: #444;
+  code {
     border-radius: 4px;
-    color: lighten($yellow, 20);
-    padding: 2em;
-    overflow-x: auto;
-    word-break: break-all;
+    font-family: "helvetica";
+    font-family: $code-font-family;
+    font-size: 1.25rem;
+    padding: 1rem;
   }
 }
