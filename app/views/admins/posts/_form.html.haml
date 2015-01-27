@@ -5,10 +5,9 @@
     %article
       = simple_form_for [:admins, @post] do |f|
         = f.input :published, as: :select
-        = f.input :title,
-          input_html: { class: "post__title--admin" }
-        = f.input :body,
-          input_html: { class: "post__body--admin" }
-        = f.button :submit,
-          class: "button--primary"
+        = f.file_field :feature_image
+        = image_tag @post.feature_image.url
+        = f.input :title, input_html: { class: "post__title--admin" }
+        = f.input :body, input_html: { class: "post__body--admin" }
+        = f.button :submit, class: "button--primary"
       = link_to "All Posts", admins_posts_path

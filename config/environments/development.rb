@@ -40,6 +40,8 @@ Rails.application.configure do
   # a parameter is not explcitly permitted but is passed anyway.
   config.action_controller.action_on_unpermitted_parameters = :raise
 
-
   config.action_mailer.default_url_options = { host: 'whoastudio.local' }
+
+  # Allow paperclip access to imagemagick
+  Paperclip.options[:command_path] = "/usr/local/bin/"
 end
