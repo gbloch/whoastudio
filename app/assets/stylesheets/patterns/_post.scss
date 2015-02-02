@@ -18,6 +18,13 @@
   margin: 0 auto;
 }
 
+.post__feature-thumbnail {
+  @include size(160px);
+  background-position: center center;
+  background-size: cover;
+  border-radius: 100px;
+}
+
 .post__title {
   color: $base-font-color;
   font-family: $sans-serif;

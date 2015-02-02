@@ -15,17 +15,25 @@
 
 .navigation__trigger {
   @include transition(all .5s ease);
-  @include position(fixed, .25em null null .5em);
+  @include position(fixed, .5em null null .5em);
+  @include size(34px);
   color: rgba(black, 0.5);
-  font-size: 2em;
+  text-align: center;
   z-index: 99;
+
+  i {
+    font-size: 34px;
+    line-height: 40px;
+    vertical-align: middle;
+  }
 
   &:hover {
     color: lighten($base-link-color, 10%);
   }
 
   &.expanded {
-    @include transform(rotate(90deg));
+    @include transform(rotate(135deg));
+    color: $base-link-color;
   }
 }
 

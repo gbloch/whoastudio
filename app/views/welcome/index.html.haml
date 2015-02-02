@@ -6,12 +6,14 @@
         Design Experiments &amp; Findings
       %form
         %input.hero-search{ type: "text" }
+    .hero-background
 
   %section.posts--list
     %ul
     - @posts.each do |post|
       %li
         %article
+          .post__feature-thumbnail{ style: "background-image: asset-url(#{post.feature_image.url})" }
           = link_to post, class: "post__title" do
             %h2 
               = post.title
