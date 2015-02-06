@@ -4,5 +4,6 @@
   .layout--medium
     %h1.post__title.post__title--large
       = @post.title
+    = @post.admin_email
     .post__body
       = parse(@post.body)
