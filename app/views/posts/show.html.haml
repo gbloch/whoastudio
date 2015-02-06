@@ -1,6 +1,8 @@
 %article.post
-  = image_tag @post.feature_image.url
-  %h1.post__title.post__title--large
-    = @post.title
-  .post__body
-    = parse(@post.body)
+  .post__image-wrapper
+    = image_tag @post.feature_image.url, class: "post__image"
+  .layout--medium
+    %h1.post__title.post__title--large
+      = @post.title
+    .post__body
+      = parse(@post.body)

@@ -12,10 +12,9 @@
   }
 }
 
-.post {
-  position: relative;
-  max-width: $medium-screen;
-  margin: 0 auto;
+.post__image-wrapper {
+  opacity: 0;
+  text-align: center;
 }
 
 .post__feature-thumbnail {
