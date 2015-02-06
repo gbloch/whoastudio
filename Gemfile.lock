@@ -101,6 +101,7 @@ GEM
     foreman (0.75.0)
       dotenv (~> 0.11.1)
       thor (~> 0.19.1)
+    gravatarify (3.0.0)
     haml (4.0.5)
       tilt
     hashie (3.3.1)
@@ -271,6 +272,7 @@ DEPENDENCIES
   flutie
   font-awesome-rails
   foreman
+  gravatarify (~> 3.0.0)
   haml
   high_voltage
   instagram
