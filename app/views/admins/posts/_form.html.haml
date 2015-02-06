@@ -6,6 +6,7 @@
       = simple_form_for [:admins, @post] do |f|
         = f.input :published, as: :select
         = f.file_field :feature_image
+        = f.association :admin, value_method: :id, label_method: :email
         = image_tag @post.feature_image.url
         = f.input :title, input_html: { class: "post__title--admin" }
         = f.input :body, input_html: { class: "post__body--admin" }

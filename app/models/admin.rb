@@ -1,4 +1,6 @@
 class Admin < ActiveRecord::Base
+  has_many :posts
+
   devise :database_authenticatable, :recoverable, :registerable, :rememberable, 
          :timeoutable, :validatable
 

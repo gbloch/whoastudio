@@ -1,4 +1,6 @@
 class Post < ActiveRecord::Base
+  belongs_to :admin
+
   has_attached_file(
     :feature_image,
     styles: { medium: "300x300>" },
