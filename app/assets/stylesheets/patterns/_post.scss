@@ -18,7 +18,8 @@
 }
 
 .post__feature-thumbnail {
-  @include size(160px);
+  @include size(140px);
+  margin: 0 auto;
   background-position: center center;
   background-size: cover;
   border-radius: 100px;
@@ -28,12 +29,14 @@
   color: $base-font-color;
   font-family: $sans-serif;
   line-height: 1;
+  text-align: center;
   width: 100%;
 }
 
 .post__title--large {
   font-size: 4.5rem;
   letter-spacing: -0.25rem;
+  padding-bottom: 2rem;
 }
 
 .post__body {
