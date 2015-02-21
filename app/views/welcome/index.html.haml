@@ -11,7 +11,7 @@
     - @posts.each do |post|
       %li
         %article
-          .post__feature-thumbnail{ style: "background-image: url(#{post.feature_image.url})" }
+          = image_tag post.feature_image.url, class: "post__feature-thumbnail"
           = link_to post, class: "post__title" do
             %h2 
               = post.title
