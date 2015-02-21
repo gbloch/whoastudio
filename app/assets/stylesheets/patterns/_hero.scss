@@ -1,6 +1,6 @@
 .hero-intro {
+  @include transition(all 0.25s);
   text-align: center;
-  width: 300px;
   z-index: 1;
 
   @include media($medium-screen) {
@@ -28,7 +28,7 @@
   border: none;
   color: rgba(white, 0);
   font-size: 1.25rem;
-  margin: 0.25rem auto;
+  margin: 2rem auto 0;
   padding: 1rem;
 
   &:hover,
