@@ -1,0 +1,15 @@
+.icon {
+  @include size(1rem);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.icon--menu {
+  background-image: image-url("icon-menu.svg");
+}
+
+.icon--plus-sign {
+  background-image: image-url("icon-plus-sign.svg");
+}
