@@ -3,8 +3,18 @@ body, html {
   margin: 0px;
 }
 
+.layout-main {
+  @include transition(all .5s ease);
+
+  @include media($small-screen) {
+    &.expanded {
+      padding-left: $admin-nav-width;
+    }
+  }
+}
+
 .layout-hero--cover {
-  @include size(100vw 100vh);
+  @include size(100% 100vh);
   @include display(flex);
   @include align-items(center);
   @include justify-content(center);

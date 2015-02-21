@@ -1,15 +1,18 @@
 .navigation__drawer {
   @include transition(all .5s ease);
-  @include position(fixed, em(0) null em(0) null);
+  @include position(fixed, 0px null 0px -100%);
   background: rgba(black, 0.8);
   padding: 5em 1em;
-  left: -50%;
-  min-width: $admin-nav-width;
-  width: 50%;
+  width: 100%;
   z-index: 2;
 
+  @include media($small-screen){
+    left: -$admin-nav-width;
+    width: $admin-nav-width;
+  }
+
   &.expanded {
-    left: em(0);
+    left: 0px;
   }
 }
 

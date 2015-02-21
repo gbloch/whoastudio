@@ -3,6 +3,7 @@ class Navigation
     @csrfToken = $("meta[name='csrf-token']").attr("content")
 
     @navigation = $(selector)
+    @main = $(".layout-main")
     @navigationTrigger = @navigation.find(".navigation__trigger")
     @navigationDrawer = @navigation.find(".navigation__drawer")
     @_bindEvents()
@@ -10,6 +11,7 @@ class Navigation
   _bindEvents: ->
     @navigationTrigger.on "click", (event) =>
       event.preventDefault()
+      @main.toggleClass "expanded"
       @navigationTrigger.toggleClass "expanded"
       @navigationDrawer.toggleClass "expanded"
       @_setSession()
