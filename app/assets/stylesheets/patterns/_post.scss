@@ -13,16 +13,14 @@
 }
 
 .post__image-wrapper {
-  opacity: 0;
   text-align: center;
+  margin-top: 6rem;
 }
 
 .post__feature-thumbnail {
-  @include size(140px);
+  @include size(auto 6rem);
+  display: block;
   margin: 0 auto;
-  background-position: center center;
-  background-size: cover;
-  border-radius: 100px;
 }
 
 .post__title {
@@ -34,9 +32,13 @@
 }
 
 .post__title--large {
-  font-size: 4.5rem;
-  letter-spacing: -0.25rem;
-  padding-bottom: 2rem;
+  font-size: 2.5rem;
+  margin: 4rem 0;
+
+  @include media($small-screen) {
+    font-size: 4.5rem;
+    letter-spacing: -0.25rem;
+  }
 }
 
 .post__byline {
@@ -47,7 +49,7 @@
   padding: 0 1rem;
 
   @include media($medium-screen){
-    padding: 0rem;
+    padding: 1rem;
   } 
 
   h1, h2, h3, h4, h5, h6 {

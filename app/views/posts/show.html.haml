@@ -1,12 +1,13 @@
-%article.post
-  .post__image-wrapper
-    = image_tag @post.feature_image.url, class: "post__image"
-  .layout--medium
-    %h1.post__title.post__title--large
-      = @post.title
-    .post__byline
-      .gravatar
-        = gravatar_tag @post.admin_email
-      = "by #{@post.admin_email}"
-    .post__body
-      = parse(@post.body)
+%main.layout-main
+  %article.post
+    .post__image-wrapper
+      = image_tag @post.feature_image.url, class: "post__image"
+    .layout--medium
+      %h1.post__title.post__title--large
+        = @post.title
+      .post__byline
+        .gravatar
+          = gravatar_tag @post.admin_email
+        = "by #{@post.admin_email}"
+      .post__body
+        = parse(@post.body)
