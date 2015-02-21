@@ -3,13 +3,17 @@ body, html {
   margin: 0px;
 }
 
-.layout-main {
+.layout {
   @include transition(all .5s ease);
 
   @include media($small-screen) {
-    &.expanded {
+    .expanded & {
       padding-left: $admin-nav-width;
     }
+  }
+
+  .expanded &.layout--medium {
+    max-width: $large-screen;
   }
 }
 

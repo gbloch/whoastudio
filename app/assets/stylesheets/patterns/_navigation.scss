@@ -11,7 +11,7 @@
     width: $admin-nav-width;
   }
 
-  &.expanded {
+  .expanded & {
     left: 0px;
   }
 }
@@ -38,7 +38,7 @@
     background-size: 1rem;
   }
 
-  &.expanded {
+  .expanded & {
     @include transform(rotate(135deg));
 
     .icon--menu {
