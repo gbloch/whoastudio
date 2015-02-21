@@ -14,26 +14,37 @@
 }
 
 .navigation__trigger {
-  @include transition(all .5s ease);
   @include position(fixed, .5em null null .5em);
-  @include size(34px);
-  color: rgba(black, 0.5);
+  @include size(2rem);
+  @include transition(all 0.5s ease);
+  background-color: rgba(black, 0.125);
+  border-radius: 100px;
+  padding: 0.5rem;
   text-align: center;
   z-index: 99;
 
-  i {
-    font-size: 34px;
-    line-height: 40px;
-    vertical-align: middle;
+  .icon {
+    @include transition(all 0.5s ease);
+  }
+  
+  .icon--plus-sign {
+    background-size: 0%
   }
 
-  &:hover {
-    color: lighten($base-link-color, 10%);
+  .icon--menu {
+    background-size: 1rem;
   }
 
   &.expanded {
     @include transform(rotate(135deg));
-    color: $base-link-color;
+
+    .icon--menu {
+      background-size: 0%
+    }
+
+    .icon--plus-sign {
+      background-size: 1rem;
+    }
   }
 }
 
