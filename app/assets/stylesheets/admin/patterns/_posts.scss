@@ -1,3 +1,8 @@
+.post {
+  @include outer-container;
+  padding: 4rem 0;
+}
+
 .post-table {
   text-align: left;
   width: 100%;
@@ -15,18 +20,43 @@
   }
 }
 
-.post__title--admin {
-  line-height: 1.7;
-  font-size: $base-font-size;
-  border: solid 1px $light-gray;
-  min-height: em(50);
-  width: 100%;
+.post__article {
+  @include media($large-screen) {
+    @include span-columns(8);
+  }
+
+  input[type="text"] {
+    border: none;
+    border-bottom: solid 1px $light-gray;
+    font-size: $base-font-size * 2; 
+    padding: 0.25rem;
+  }
+
+  textarea {
+    min-height: em(600);
+  }
+
+  .button {
+    margin-top: 2rem;
+  }
+
+  .card {
+    text-align: center;
+
+    img {
+      // display: block;
+    }
+  }
 }
 
-.post__body--admin {
-  font-size: $base-font-size;
-  border: solid 1px $light-gray;
-  min-height: em(600);
-  width: 100%;
-  line-height: 1.7;
+.post__aside {
+  padding-left: 2rem;
+
+  @include media($large-screen) {
+    @include span-columns(4);
+  }
+
+  .button {
+    margin-top: 2rem;
+  }
 }
