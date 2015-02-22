@@ -1,8 +1,16 @@
 .button {
+  background-color: transparent;
   border-radius: 50px;
   border: solid 2px $base-button-background-color;
   color: $base-button-color;
   display: inline-block;
+  font-family: $base-font-family;
   font-size: $base-font-size;
-  padding: 0.25rem 2rem;
+  padding: 0.5rem 2rem;
+
+  &:hover {
+    background-color: $base-button-background-color;
+    cursor: pointer;
+    color: white;
+  }
 }

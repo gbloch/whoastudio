@@ -16,5 +16,6 @@
             %h2 
               = post.title
           = strip_tags(parse(post.body.truncate(350)))
-          = link_to post, class: "read-more" do
-            read more
+          %div.post__read-more
+            = link_to post, class: "button" do
+              read more
