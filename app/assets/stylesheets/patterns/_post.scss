@@ -61,15 +61,21 @@
 }
 
 .post__body {
-  padding: 0 1rem;
+  @include transition(font-size, 0.5s, padding 0.5s);
+  padding: 0 1rem 6rem;
 
-  @include media($medium-screen){
-    padding: 1rem;
+  @include media($medium-screen) {
+    padding: 1rem 1rem 6rem;
   } 
 
   h1, h2, h3, h4, h5, h6 {
     font-family: $serif;
     font-style: italic;
+  }
+  
+  a {
+    color: $base-link-color;
+    font-weight: 700;
   }
 
   code {

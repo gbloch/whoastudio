@@ -36,7 +36,7 @@
   &:hover,
   &:focus {
     background-color: rgba(mix(black, $blue, 50%), .5);
-    box-shadow: 0 0 1em rgba($purple, 0.4);
+    box-shadow: 0 0 1em rgba($base-link-color, 0.4);
     color: white;
     outline: none;
     padding-left: 2.5rem;

@@ -1,0 +1,7 @@
+ul {
+  line-height: $base-line-height * 1.25;
+
+  @include media($xx-large-screen) {
+    font-size: $base-font-size * 1.15;
+  }
+}

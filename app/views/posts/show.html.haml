@@ -8,6 +8,6 @@
       .post__byline
         .gravatar
           = gravatar_tag @post.admin_email
-        = "by #{@post.admin_email}"
+        = "By #{@post.admin_email}"
       .post__body
         = parse(@post.body)
