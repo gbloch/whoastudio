@@ -31,3 +31,21 @@ body, html {
   max-width: $medium-screen;
   padding: 0 1rem;
 }
+
+.layout--large {
+  margin: 0 auto;
+  max-width: $large-screen;
+  padding: 0 1rem;
+
+  .expanded & {
+    max-width: $x-large-screen;
+  }
+
+  @include media($large-screen) {
+    max-width: $large-screen;
+  }
+}
+
+.layout__section {
+  padding: $base-section-padding;
+}
