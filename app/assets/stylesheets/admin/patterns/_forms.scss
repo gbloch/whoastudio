@@ -1,0 +1,30 @@
+.input--default {
+  font-size: $base-font-size;
+  padding: 0.75em;
+  width: 100%;
+}
+
+form {
+  button,
+  input[type="file"] { 
+    display: block;
+  }
+
+  label {
+    margin: 1rem 0 0;
+    display: block;
+    font-size: $label-font-size;
+  }
+
+  textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    display: block;
+    line-height: 1.7;
+    border: solid 1px $light-gray;
+    font-size: $base-font-size;
+    box-shadow: none;
+    width: 100%;
+  }
+}
