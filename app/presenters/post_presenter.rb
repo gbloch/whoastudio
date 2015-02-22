@@ -24,6 +24,12 @@ class PostPresenter < SimpleDelegator
     end
   end
 
+  def published_at_fulldate
+    if published_at?
+      @post.published_at.strftime("%B %d %Y")
+    end
+  end
+
   def published_at?
     @post.published_at
   end

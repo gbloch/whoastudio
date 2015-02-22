@@ -8,6 +8,7 @@
       .post__byline
         .gravatar
           = gravatar_tag @post.admin_email
+        = @post.published_at_fulldate
         = "By #{@post.admin_email}"
       .post__body
         = parse(@post.body)
