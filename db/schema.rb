@@ -11,7 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150206030059) do
 ActiveRecord::Schema.define(version: 20150222030320) do
 
   # These are extensions that must be enabled in order to support this database
@@ -55,7 +54,7 @@ ActiveRecord::Schema.define(version: 20150222030320) do
 
   create_table "posts", force: true do |t|
     t.string   "status"
-    t.text     "title"
+    t.string   "title"
     t.text     "body"
     t.boolean  "published",                  default: true
     t.string   "feature_image_file_name"
