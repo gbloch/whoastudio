@@ -1,6 +1,6 @@
 class Admins::PostsController < AdminsController 
   def index
-    @posts = Post.all
+    @posts = Post.order("published_at ASC")
   end
   
   def new

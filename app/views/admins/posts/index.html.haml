@@ -1,31 +1,31 @@
-%main.layout.layout--medium
-  %section.layout__section
-    %header
+%main.layout.layout--large
+  %section.layout__section.posts
+    %header.posts__header
+      %h1
+        All Posts
       = link_to new_admins_post_path, class: "button" do
         New Post
         %i.fa.fa-plus
-    %hr
-    %h1 All Posts
-    %table.post-table
+    %table.posts-table
       %tr
-        %th.post-table__col
+        %th.posts-table__col
           Title
-        %th.post-table__col
+        %th.posts-table__col
           Published At
-        %th.post-table__col
+        %th.posts-table__col
           Published
-        %th.post-table__col
+        %th.posts-table__col
       - @posts.each do |post|
         - post = PostPresenter.new(post)
         %tr
-          %td.post-table__col
+          %td.posts-table__col
             = link_to edit_admins_post_path(post) do
               = post.title
-          %td.post-table__col
+          %td.posts-table__col
             = post.published_at_formatted
-          %td.post-table__col
+          %td.posts-table__col
             = post.published
-          %td.post-table__col
+          %td.posts-table__col
             = link_to 'Delete', admins_post_path(post),
               method: :delete,
               data: { confirm: 'Are you sure?' }
