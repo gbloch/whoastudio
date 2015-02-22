@@ -1,8 +1,8 @@
-.button--primary {
-  background-color: $primary-button-background-color;
-  border-radius: $base-border-radius;
-  border: none;
-  color: $primary-button-color;
+.button {
+  border-radius: 50px;
+  border: solid 2px $base-button-background-color;
+  color: $base-button-color;
+  display: inline-block;
   font-size: $base-font-size;
-  padding: 1em 2em;
+  padding: 0.25rem 2rem;
 }
