@@ -1,4 +1,6 @@
 .posts--list {
+  @include transition(padding, 0.5s);
+  padding: 0 2rem;
   max-width: $medium-screen;
   margin: 4em auto;
 
@@ -9,6 +11,14 @@
 
   li + li {
     border-top: solid 1px $light-gray;
+  }
+
+  @include media($large-screen) {
+    padding: 0;
+  }
+
+  .expanded & {
+    padding: 0 2rem;
   }
 }
 

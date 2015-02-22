@@ -1,11 +1,13 @@
 .hero-intro {
   @include transition(all 0.25s);
   text-align: center;
+  padding: 0 2rem;
   z-index: 1;
 
   @include media($medium-screen) {
     min-width: 320px;
     max-width: 480px;
+    padding: 0;
     width: 50%;
   }
 }
