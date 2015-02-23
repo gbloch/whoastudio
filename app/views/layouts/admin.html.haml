@@ -3,12 +3,13 @@
   %head
     %meta{charset: "utf-8"}
     %meta{content: "NOODP", name: "ROBOTS"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
     %title
       = "#{title} | Admin"
     = stylesheet_link_tag :admin, media: 'all'
     = javascript_include_tag :admin
     = csrf_meta_tags
-  %body{class: [body_class, @navigation_state].join(' ') }
+  %body{class: [body_class, navigation_state].join(' ') }
     = render 'flashes'
     = render 'admins/navigation' 
     = yield

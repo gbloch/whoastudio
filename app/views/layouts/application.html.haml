@@ -8,7 +8,7 @@
       = title
     = stylesheet_link_tag :application, :media => "all"
     = csrf_meta_tags
-  %body{class: [body_class, @navigation_state].join(' ') }
+  %body{class: [body_class, navigation_state].join(' ') }
     = render "flashes"
     = render "application/navigation" 
     = yield

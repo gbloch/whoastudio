@@ -4,8 +4,7 @@ Rails.application.routes.draw do
 
   root to: "welcome#index"
 
-  post "set_navigation_state_session", 
-    to: "admins#set_navigation_state_session"
+  post "set_navigation_state", to: "navigation#set_navigation_state"
 
   resources :posts, only: [:show]
 

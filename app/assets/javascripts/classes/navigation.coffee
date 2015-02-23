@@ -14,7 +14,7 @@ class Navigation
       @_setSession()
 
   _setSession: ->
-    if @navigationTrigger.hasClass("expanded")
+    if @body.hasClass("expanded")
       @_ajax("expanded")
     else
       @_ajax("")
@@ -22,7 +22,7 @@ class Navigation
   _ajax: (data) =>
     $.ajax
       type: "post"
-      url: "/set_navigation_state_session"
+      url: "/set_navigation_state"
       data: 
         navigation_state: data
       beforeSend: (xhr) ->
