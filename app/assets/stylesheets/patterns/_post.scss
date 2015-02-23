@@ -27,7 +27,6 @@
 }
 
 .post__read-more {
-  margin-top: 2rem;
   text-align: center;
 }
 
@@ -79,13 +78,13 @@
   text-align: center;
 }
 
+.post__byline__date {
+  font-size: $small-font-size;
+  color: $medium-gray;
+}
+
 .post__body {
   @include transition(font-size, 0.5s, padding 0.5s);
-  padding: 0 1rem 6rem;
-
-  @include media($medium-screen) {
-    padding: 1rem 1rem 6rem;
-  } 
 
   h1, h2, h3, h4, h5, h6 {
     font-family: $serif;
@@ -103,5 +102,21 @@
     font-family: $code-font-family;
     font-size: 1.25rem;
     padding: 1rem;
+  }
+}
+
+.post__body--summary {
+  padding: 0 1rem 2rem;
+
+  @include media($medium-screen) {
+    padding: 1rem 1rem 2rem;
+  }
+}
+
+.post__body--full {
+  padding: 0 1rem 6rem;
+
+  @include media($medium-screen) {
+    padding: 1rem 1rem 6rem;
   }
 }
