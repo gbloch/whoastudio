@@ -1,4 +1,6 @@
 class PostPresenter < SimpleDelegator
+  require "kramdown"
+
   def initialize(post)
     @post = post
     super(@post)
@@ -14,6 +16,14 @@ class PostPresenter < SimpleDelegator
     unless admin.nil?
       admin.email
     end
+  end
+
+  def body_html
+    Kramdown::Document.new(@post.body).to_html.html_safe
+  end
+
+  def body_summary_html
+    body_html.truncate(350)
   end
 
   def published_at_formatted

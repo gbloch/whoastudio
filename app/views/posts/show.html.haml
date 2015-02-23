@@ -13,4 +13,4 @@
         .post__byline__date
           = @post.published_at_fulldate
       .post__body.post__body--full
-        = parse(@post.body)
+        = @post.body_html

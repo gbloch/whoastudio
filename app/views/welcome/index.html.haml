@@ -22,7 +22,7 @@
             .post__byline__date
               = post.published_at_fulldate
           .post__body.post__body--summary
-            = strip_tags(parse(post.body.truncate(350)))
+            = strip_tags(post.body_summary_html)
           %div.post__read-more
             = link_to post, class: "button" do
               read more

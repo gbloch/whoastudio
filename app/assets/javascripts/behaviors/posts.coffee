@@ -1,7 +1,7 @@
 class @.Posts
   constructor: (target) ->
     @post = $(target)
-    @_decorateCodeElements()
+    # @_decorateCodeElements()
 
   _decorateCodeElements: ->
     hljs.configure useBR: true
@@ -13,5 +13,5 @@ $ ->
   $("article.post").each ->
     new Posts(@)
 
-  #crossOrigin
-  #http://stackoverflow.com/questions/18474727/canvas-has-been-tainted-by-cross-origin-data-work-around
+#crossOrigin
+#http://stackoverflow.com/questions/18474727/canvas-has-been-tainted-by-cross-origin-data-work-around
