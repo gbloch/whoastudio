@@ -8,6 +8,8 @@
     html: { method: :put }) do |f|
     = f.error_notification
     .form-inputs
+      .gravatar
+        = gravatar_tag resource.email
       = f.input :email, required: true, autofocus: true
       - if devise_mapping.confirmable? && resource.pending_reconfirmation?
         %p
