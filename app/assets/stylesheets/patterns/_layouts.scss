@@ -12,9 +12,6 @@ body, html {
     }
   }
 
-  .expanded &.layout--medium {
-    max-width: $large-screen;
-  }
 }
 
 .layout-hero--cover {
@@ -30,6 +27,10 @@ body, html {
   margin: 0 auto;
   max-width: $medium-screen;
   padding: 0 1rem;
+
+  .expanded & {
+    max-width: $large-screen;
+  }
 }
 
 .layout--large {
@@ -39,10 +40,6 @@ body, html {
 
   .expanded & {
     max-width: $x-large-screen;
-  }
-
-  @include media($large-screen) {
-    max-width: $large-screen;
   }
 }
 
