@@ -96,12 +96,10 @@
     font-weight: 700;
   }
 
-  code {
+  pre {
+    overflow-x: scroll;
+    background: lighten($light-gray, 10%);
     border-radius: 4px;
-    font-family: "helvetica";
-    font-family: $code-font-family;
-    font-size: 1.25rem;
-    padding: 1rem;
   }
 }
 
