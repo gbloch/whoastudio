@@ -3,4 +3,3 @@
 
 //= require_tree ./classes
 //= require_tree ./application
-//= require_tree ./behaviors
