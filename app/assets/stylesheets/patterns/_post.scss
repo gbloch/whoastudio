@@ -98,7 +98,7 @@
 
   pre {
     overflow-x: scroll;
-    background: lighten($light-gray, 10%);
+    background: $code-background-color;
     border-radius: 4px;
   }
 }

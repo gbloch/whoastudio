@@ -48,6 +48,14 @@ a {
 pre {
   padding: $base-padding;
   font-size: $base-font-size; 
+
+  .highlight & {
+    font-family: $code-font-family;
+  }
+
+  @include media($xx-large-screen) {
+    font-size: $base-font-size * 1.15;
+  }
 }
 
 code {
@@ -55,6 +63,7 @@ code {
   border-radius: 4px;
   font-family: $code-font-family;
   padding: $base-padding / 4 $base-padding;
+  color: $alert-color;
 
   @include media($xx-large-screen) {
     font-size: $code-font-size * 1.15;
