@@ -12,4 +12,5 @@
       .post__byline__date
         = @post.published_at_fulldate
     .post__body.post__body--full
-      = @post.body_html
+      = preserve do
+        = raw @post.body_html
