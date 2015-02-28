@@ -22,7 +22,7 @@ h6 {
 }
 
 p {
-  margin: 0 0 ($base-line-height * .5);
+  margin: 0 0 $base-line-height;
   font-size: $base-font-size;
   line-height: $base-line-height;
 
@@ -45,25 +45,12 @@ a {
   }
 }
 
-pre {
-  padding: $base-padding;
-  font-size: $base-font-size; 
-
-  .highlight & {
-    font-family: $code-font-family;
-  }
-
-  @include media($xx-large-screen) {
-    font-size: $base-font-size * 1.15;
-  }
-}
-
 code {
   background: lighten($light-gray, 10%);
   border-radius: 4px;
+  color: darken($medium-gray, 15%);
   font-family: $code-font-family;
-  padding: $base-padding / 4 $base-padding;
-  color: $alert-color;
+  padding: $base-padding / 4;
 
   @include media($xx-large-screen) {
     font-size: $code-font-size * 1.15;
@@ -103,10 +90,10 @@ del {
 }
 
 blockquote {
-  margin: 2rem 0;
+  margin: 3rem 0;
   padding-left: 1rem;
-  border-left: solid 0.5rem $green;
-  color: lighten($base-font-color, 15%);
+  border-left: solid 0.25rem $light-gray;
+  color: lighten($base-font-color, 35%);
 }
 
 cite {

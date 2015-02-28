@@ -32,10 +32,10 @@
 
 .post__image-wrapper {
   text-align: center;
-  margin-top: 4rem;
+  margin-top: 2rem;
 
   @include media($small-screen) {
-    margin-top: 6rem;
+    margin-top: 4rem;
   }
 }
 
@@ -68,9 +68,9 @@
   margin: 2rem 0;
 
   @include media($small-screen) {
-    font-size: 4.5rem;
-    letter-spacing: -0.25rem;
-    margin: 3rem 0;
+    font-size: 4rem;
+    letter-spacing: -0.125rem;
+    margin: 2rem 0;
   }
 }
 
@@ -86,9 +86,17 @@
 .post__body {
   @include transition(font-size, 0.5s, padding 0.5s);
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: $serif;
-    font-style: italic;
+  }
+
+  h2 {
+    margin-top: 4rem;
   }
   
   a {
@@ -97,9 +105,19 @@
   }
 
   pre {
-    overflow-x: scroll;
     background: $code-background-color;
     border-radius: 4px;
+    font-family: $code-font-family;
+    font-size: $base-font-size; 
+    letter-spacing: -0.0375rem;
+    line-height: 1.4;
+    margin: ($base-paragraph-margin * 2) 0;
+    overflow-x: scroll;
+    padding: $base-padding;
+
+    @include media($xx-large-screen) {
+      font-size: $base-font-size * 1.15;
+    }
   }
 }
 
