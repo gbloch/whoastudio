@@ -1,5 +1,5 @@
 class PostPresenter < SimpleDelegator
-  require "kramdown"
+  require "html/pipeline"
 
   def initialize(post)
     @post = post
@@ -19,7 +19,7 @@ class PostPresenter < SimpleDelegator
   end
 
   def body_html
-    Kramdown::Document.new(@post.body).to_html.html_safe
+    markdown_to_html_with_highlighting(@post.body)
   end
 
   def body_summary_html
@@ -46,6 +46,17 @@ class PostPresenter < SimpleDelegator
 
   def admin_id_for_post
     Post.find(@post.id).admin
+  end
+
+  def html_pipeline
+    HTML::Pipeline.new [
+      HTML::Pipeline::MarkdownFilter,
+    ], {gfm: true}
+  end
+
+  def markdown_to_html_with_highlighting(content)
+    result = html_pipeline.call(content)
+    result[:output].to_s
   end
 
   def published_at?
