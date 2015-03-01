@@ -23,7 +23,7 @@ class PostPresenter < SimpleDelegator
   end
 
   def body_summary_html
-    body_html.truncate(350)
+    body_html.truncate(240)
   end
 
   def published_at_formatted

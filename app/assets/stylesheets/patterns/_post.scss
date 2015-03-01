@@ -49,7 +49,7 @@
 }
 
 .post__feature-thumbnail {
-  @include size(auto 6rem);
+  @include size(auto 5rem);
   display: block;
   margin: 0 auto;
 }
@@ -58,6 +58,7 @@
   color: $base-font-color;
   font-family: $sans-serif;
   line-height: 1;
+  margin: 1rem 0;
   text-align: center;
   width: 100%;
 }
@@ -75,7 +76,12 @@
 }
 
 .post__byline {
+  font-size: $small-font-size;
   text-align: center;
+
+  @include media($large-screen) {
+    font-size: $base-font-size;
+  }
 }
 
 .post__byline__date {
@@ -122,11 +128,7 @@
 }
 
 .post__body--summary {
-  padding: 0 1rem 2rem;
-
-  @include media($medium-screen) {
-    padding: 1rem 1rem 2rem;
-  }
+  padding: 1rem;
 }
 
 .post__body--full {

@@ -13,8 +13,8 @@
       %li
         %article
           = image_tag post.feature_image.url, class: "post__feature-thumbnail"
-          = link_to post, class: "post__title" do
-            %h2 
+          = link_to post do
+            %h2.post__title
               = post.title
           .post__byline
             .post__byline__author

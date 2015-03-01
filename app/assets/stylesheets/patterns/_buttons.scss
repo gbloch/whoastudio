@@ -13,4 +13,9 @@
     cursor: pointer;
     color: white;
   }
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
 }
