@@ -18,12 +18,13 @@ class PostPresenter < SimpleDelegator
     end
   end
 
-  def body_html
-    markdown_to_html_with_highlighting(@post.body)
+  def body_as_string
+    result = html_pipeline.call(@post.body)
+    result[:output].to_s
   end
 
   def body_summary_html
-    body_html.truncate(240)
+    body_as_string.truncate(240)
   end
 
   def published_at_formatted
@@ -53,11 +54,6 @@ class PostPresenter < SimpleDelegator
       HTML::Pipeline::MarkdownFilter,
       HTML::Pipeline::SyntaxHighlightFilter
     ], {gfm: true}
-  end
-
-  def markdown_to_html_with_highlighting(content)
-    result = html_pipeline.call(content)
-    result[:output].to_s
   end
 
   def published_at?

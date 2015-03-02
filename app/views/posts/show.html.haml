@@ -13,4 +13,4 @@
         = @post.published_at_fulldate
     .post__body.post__body--full
       = preserve do
-        = raw @post.body_html
+        = raw @post.body_as_string
