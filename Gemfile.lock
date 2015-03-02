@@ -109,6 +109,8 @@ GEM
     foreman (0.75.0)
       dotenv (~> 0.11.1)
       thor (~> 0.19.1)
+    friendly_id (5.1.0)
+      activerecord (>= 4.0.0)
     github-linguist (4.4.2)
       charlock_holmes (~> 0.7.3)
       escape_utils (~> 1.0.1)
@@ -295,6 +297,7 @@ DEPENDENCIES
   flutie
   font-awesome-rails
   foreman
+  friendly_id
   github-linguist
   github-markdown
   gravatarify (~> 3.0.0)

@@ -1,5 +1,7 @@
 class Post < ActiveRecord::Base
   belongs_to :admin
+  extend FriendlyId
+  friendly_id :title, use: :slugged
 
   has_attached_file(
     :feature_image,

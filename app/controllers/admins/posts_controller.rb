@@ -1,6 +1,6 @@
 class Admins::PostsController < AdminsController 
   def index
-    @posts = Post.order("published_at ASC")
+    @posts = Post.friendly.order("published_at ASC")
   end
   
   def new
@@ -18,11 +18,11 @@ class Admins::PostsController < AdminsController
   end
 
   def edit
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
    
     if @post.update(post_params)
       redirect_to :back
@@ -42,12 +42,13 @@ class Admins::PostsController < AdminsController
 
   def post_params
     params.require(:post).permit(
-      :title,
+      :admin_id,
       :body,
+      :feature_image,
       :published_at,
       :published,
-      :feature_image,
-      :admin_id
+      :slugged,
+      :title,
     )
   end
 end
