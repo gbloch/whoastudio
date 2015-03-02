@@ -99,13 +99,7 @@ GEM
     factory_girl_rails (4.4.1)
       factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
-    faraday (0.9.0)
-      multipart-post (>= 1.2, < 3)
-    faraday_middleware (0.9.1)
-      faraday (>= 0.7.4, < 0.10)
     flutie (2.0.0)
-    font-awesome-rails (4.1.0.0)
-      railties (>= 3.2, < 5.0)
     foreman (0.75.0)
       dotenv (~> 0.11.1)
       thor (~> 0.19.1)
@@ -120,18 +114,11 @@ GEM
     gravatarify (3.0.0)
     haml (4.0.5)
       tilt
-    hashie (3.3.1)
-    high_voltage (2.2.1)
     hike (1.2.3)
     html-pipeline (1.11.0)
       activesupport (>= 2)
       nokogiri (~> 1.4)
     i18n (0.6.11)
-    instagram (1.1.3)
-      faraday (>= 0.7, < 0.10)
-      faraday_middleware (>= 0.8, < 0.10)
-      hashie (>= 0.4.0)
-      multi_json (~> 1.0, >= 1.0.3)
     jquery-rails (3.1.1)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
@@ -147,7 +134,6 @@ GEM
     mini_portile (0.6.0)
     minitest (5.4.1)
     multi_json (1.10.1)
-    multipart-post (2.0.0)
     neat (1.5.1)
       bourbon (>= 3.1)
       sass (~> 3.2.19)
@@ -295,16 +281,13 @@ DEPENDENCIES
   email_validator
   factory_girl_rails
   flutie
-  font-awesome-rails
   foreman
   friendly_id
   github-linguist
   github-markdown
   gravatarify (~> 3.0.0)
   haml
-  high_voltage
   html-pipeline
-  instagram
   jquery-rails
   launchy
   neat (~> 1.5.1)
