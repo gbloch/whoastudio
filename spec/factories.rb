@@ -1,7 +1,12 @@
 FactoryGirl.define do
+  sequence :title do |n|
+    "post #{n}"
+  end
+
   factory :post do
-    title 'Post Title'
-    body 'Body text as lorem ipsum.'
+    title
+    body "Body text as lorem ipsum."
+    published "true"
   end
 
   factory :admin do
