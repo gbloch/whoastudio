@@ -17,7 +17,7 @@
         %th.posts-table__col
       - @posts.each do |post|
         - post = PostPresenter.new(post)
-        %tr
+        %tr{ id: "post_#{post.id}" }
           %td.posts-table__col
             = link_to edit_admins_post_path(post) do
               = post.title

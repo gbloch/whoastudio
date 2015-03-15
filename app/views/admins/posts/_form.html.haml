@@ -1,21 +1,17 @@
-%main.layout.layout--large
-  %section.layout__section
-    %header
-      = link_to "All Posts", admins_posts_path
-      = simple_form_for [:admins, @post] do |f|
-        %article.post__article
-          = f.input :title
-          = f.label "Feature image"
-          .card
-            = image_tag @post.feature_image.url
-            = f.file_field :feature_image 
-          = f.input :body
-          = f.button :submit, class: "button"
-        %aside.post__aside
-          = f.input :published, as: :select
-          = f.input :published_at, as: :date
-          = f.association :admin,
-            value_method: :id,
-            label_method: :email,
-            label: "Author"
-          = f.button :submit, class: "button"
+= simple_form_for [:admins, @post] do |f|
+  %article.post__article
+    = f.input :title
+    = f.label "Feature image"
+    .card
+      = image_tag @post.feature_image.url
+      = f.file_field :feature_image 
+    = f.input :body
+    = f.button :submit, class: "button"
+  %aside.post__aside
+    = f.input :published, as: :select
+    = f.input :published_at, as: :date
+    = f.association :admin,
+      value_method: :id,
+      label_method: :email,
+      label: "Author"
+    = f.button :submit, class: "button"

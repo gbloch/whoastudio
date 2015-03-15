@@ -11,7 +11,8 @@ require 'webmock/rspec'
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |file| require file }
 
 module Features
-  # Extend this module in spec/support/features/*.rb
+  include Warden::Test::Helpers
+  Warden.test_mode!
 end
 
 RSpec.configure do |config|

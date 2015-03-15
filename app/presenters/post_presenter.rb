@@ -35,7 +35,7 @@ class PostPresenter < SimpleDelegator
 
   def published_at_fulldate
     if published_at?
-      @post.published_at.strftime("%B %d %Y")
+      @post.published_at.strftime("%B #{published_at.day.ordinalize}, %Y")
     end
   end
 

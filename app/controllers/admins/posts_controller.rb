@@ -13,7 +13,7 @@ class Admins::PostsController < AdminsController
     if @post.save
       redirect_to admins_posts_path
     else
-      render 'new'
+      render "new"
     end
   end
 
@@ -23,16 +23,16 @@ class Admins::PostsController < AdminsController
 
   def update
     @post = Post.friendly.find(params[:id])
-   
+
     if @post.update(post_params)
       redirect_to :back
     else
-      render 'edit'
+      render "edit"
     end
   end
 
   def destroy
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
     @post.destroy
     
     redirect_to admins_posts_path 
