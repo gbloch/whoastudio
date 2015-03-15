@@ -7,6 +7,7 @@ RSpec.feature "guest views posts" do
 
     visit root_path
 
+    expect(page).to have_selector "a[href='#{posts_path}'].active"
     expect(page).to have_content post_one.title
     expect(page).not_to have_content post_two.title
   end
