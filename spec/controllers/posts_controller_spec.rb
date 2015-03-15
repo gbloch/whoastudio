@@ -7,13 +7,9 @@ RSpec.describe PostsController do
       get :index
     end
 
-    it "assigns @posts" do
-      expect(assigns(:posts)).to eq([@posts])
-    end
-
-    it "renders the index template" do
-      expect(response).to render_template("index")
-    end
+    it { expect(response.status).to be 200 }
+    it { expect(assigns(:posts)).to eq [@posts] }
+    it { expect(response).to render_template "index" }
   end
 
   describe "GET show" do
@@ -22,12 +18,8 @@ RSpec.describe PostsController do
       get :show, { id: @post.id }
     end
 
-    it "assigns @post" do
-      expect(assigns(:post)).to eq(@post)
-    end
-
-    it "renders the show template" do
-      expect(response).to render_template("show")
-    end
+    it { expect(response.status).to be 200 }
+    it { expect(assigns(:post)).to eq @post  }
+    it { expect(response).to render_template "show"  }
   end
 end

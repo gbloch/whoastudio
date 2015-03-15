@@ -2,9 +2,10 @@ require "spec_helper"
 
 RSpec.describe NavigationController do
   describe "POST set_navigation_state" do
-    it "should set the navigation state" do
+    before do
       post :set_navigation_state, navigation_state: "expanded"
-      expect(session[:navigation_state]).to eq "expanded"
     end
+
+    it { expect(session[:navigation_state]).to eq "expanded" }
   end
 end

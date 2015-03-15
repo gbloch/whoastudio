@@ -2,9 +2,11 @@ require "spec_helper"
 
 RSpec.describe WorksController do
   describe "index" do
-    it "renders the works" do
+    before do
       get :index
-      expect(response).to render_template :index
     end
+
+    it { expect(response.status).to be 200 }
+    it { expect(response).to render_template "index" }
   end
 end
