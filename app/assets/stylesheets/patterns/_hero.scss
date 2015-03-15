@@ -19,5 +19,9 @@
 }
 
 .hero-intro__links {
-  margin-top: 1rem;
+  margin-top: 2.5rem;
+
+  .button + .button {
+    margin-left: 1rem;
+  }
 }
