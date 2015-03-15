@@ -4,9 +4,9 @@
   border: solid 2px $base-button-background-color;
   color: $base-button-color;
   display: inline-block;
-  font-family: $base-font-family;
+  font-family: $button-font-family;
   font-size: $base-font-size;
-  padding: 0.5rem 2rem;
+  padding: 0.25rem 2rem;
 
   &:hover {
     background-color: $base-button-background-color;
@@ -17,5 +17,19 @@
   &:hover,
   &:focus {
     outline: none;
+  }
+}
+
+.button--hero {
+  border: solid 2px $teal;
+  border: solid 2px transparent;
+  color: white;
+  text-transform: uppercase;
+  font-family: $header-font-family;
+
+  &:hover,
+  &.active {
+    background-color: $teal;
+    border: solid 2px transparent;
   }
 }
