@@ -1,10 +1,5 @@
 %main.layout
-  .layout-hero--cover
-    .hero-intro
-      = image_tag "whoa.svg", class: "logo"
-      %form
-        %input.hero-search{ type: "text" }
-    .hero-background
+  = render "hero"
 
   %section.posts--list
     %ul
