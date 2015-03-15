@@ -1,6 +1,6 @@
 require "spec_helper"
 
-feature "guest views posts" do
+RSpec.feature "guest views posts" do
   scenario "and sees only published posts" do
     post_one = create(:post, published: true)
     post_two = create(:post, published: false)

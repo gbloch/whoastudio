@@ -1,6 +1,6 @@
 require "spec_helper"
 
-feature "guest views a single post" do
+RSpec.feature "guest views a single post" do
   scenario "from landing page" do
     post = create(:post)
 

@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe NavigationController do
+RSpec.describe NavigationController do
   describe "POST set_navigation_state" do
     it "should set the navigation state" do
       post :set_navigation_state, navigation_state: "expanded"

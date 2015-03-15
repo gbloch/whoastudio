@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe WorksController do
+RSpec.describe WorksController do
   describe "index" do
     it "renders the works" do
       get :index
