@@ -1,14 +1,16 @@
 class Post < ActiveRecord::Base
-  belongs_to :admin
   extend FriendlyId
-  friendly_id :title, use: :slugged
 
+  belongs_to :admin
+
+  validates :title, presence: true
+  
+  friendly_id :title, use: :slugged
   has_attached_file(
     :feature_image,
-    styles: { medium: "300x300>" },
     default_url: "/images/:style/missing.png",
-    :storage => :dropbox,
-    :dropbox_credentials => Rails.root.join("config/dropbox.yml"),
+    storage: :dropbox,
+    dropbox_credentials: Rails.root.join("config/dropbox.yml")
   )
   validates_attachment_content_type(
     :feature_image,
