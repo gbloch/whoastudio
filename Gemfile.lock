@@ -1,10 +1,3 @@
-GIT
-  remote: git://github.com/brianmario/charlock_holmes.git
-  revision: fa35f582f9823bbf317fdf45eea721ffae8e14e3
-  branch: bundle-icu
-  specs:
-    charlock_holmes (0.7.3)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -92,7 +85,6 @@ GEM
     email_validator (1.4.0)
       activemodel
     erubis (2.7.0)
-    escape_utils (1.0.1)
     execjs (2.2.1)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
@@ -105,11 +97,6 @@ GEM
       thor (~> 0.19.1)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
-    github-linguist (4.4.2)
-      charlock_holmes (~> 0.7.3)
-      escape_utils (~> 1.0.1)
-      mime-types (>= 1.19)
-      rugged (~> 0.22.0b4)
     github-markdown (0.6.8)
     gravatarify (3.0.0)
     haml (4.0.5)
@@ -151,16 +138,12 @@ GEM
       paperclip (>= 3.1, < 5)
     pg (0.17.1)
     polyglot (0.3.5)
-    posix-spawn (0.3.10)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
     pry-rails (0.3.2)
       pry (>= 0.9.10)
-    pygments.rb (0.6.2)
-      posix-spawn (~> 0.3.6)
-      yajl-ruby (~> 1.2.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -205,7 +188,6 @@ GEM
       rspec-mocks (~> 3.0.0)
       rspec-support (~> 3.0.0)
     rspec-support (3.0.4)
-    rugged (0.22.0b5)
     safe_yaml (1.0.3)
     sass (3.2.19)
     sass-rails (4.0.3)
@@ -262,7 +244,6 @@ GEM
       crack (>= 0.3.2)
     xpath (2.0.0)
       nokogiri (~> 1.3)
-    yajl-ruby (1.2.1)
 
 PLATFORMS
   ruby
@@ -272,7 +253,6 @@ DEPENDENCIES
   awesome_print
   bourbon (~> 3.2.1)
   capybara-webkit (>= 1.0.0)
-  charlock_holmes!
   coffee-rails
   database_cleaner
   delayed_job_active_record
@@ -283,7 +263,6 @@ DEPENDENCIES
   flutie
   foreman
   friendly_id
-  github-linguist
   github-markdown
   gravatarify (~> 3.0.0)
   haml
@@ -296,7 +275,6 @@ DEPENDENCIES
   paperclip-dropbox (>= 1.1.7)
   pg
   pry-rails
-  pygments.rb
   rack-timeout
   rails (~> 4.1.0)
   rails_12factor

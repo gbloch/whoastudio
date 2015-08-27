@@ -52,7 +52,6 @@ class PostPresenter < SimpleDelegator
   def html_pipeline
     HTML::Pipeline.new [
       HTML::Pipeline::MarkdownFilter,
-      HTML::Pipeline::SyntaxHighlightFilter
     ], {gfm: true}
   end
 

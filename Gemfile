@@ -11,9 +11,7 @@ gem "email_validator"
 gem "flutie"
 gem "friendly_id"
 gem "github-markdown"
-gem "github-linguist"
 gem "html-pipeline"
-gem "pygments.rb"
 gem "gravatarify", "~> 3.0.0"
 gem "haml"
 gem "jquery-rails"
@@ -59,6 +57,5 @@ group :staging, :production do
 end
 
 group :production do
-  gem "charlock_holmes", git: "git://github.com/brianmario/charlock_holmes.git", branch: "bundle-icu"
   gem "rails_12factor"
 end
