@@ -14,6 +14,17 @@ After setting up, you can run the application using [foreman]:
 
 [foreman]: http://ddollar.github.io/foreman/
 
+Dev Seed
+-------
+
+To populate a fake user and a fake post, run:
+
+```
+$ rake dev:prime
+```
+
+You can modify these seeds in `lib/tasks/development_seeds.rake`
+
 Guidelines
 ----------
 

@@ -8,15 +8,24 @@ if Rails.env.development?
 
       create(
         :post,
-        title: "Design is Back!",
-        body: "Lorem ipsum goes here"
+        body: File.read(Rails.root.join("lib", "tasks", "seed_post.md")),
+        created_at: Time.now,
+        feature_image_file_name: "ruby.png",
+        feature_image_content_type: "image/png",
+        published: true,
+        published_at: Time.now,
+        title: "This is a Seed!",
       )
 
       create(
         :admin,
-        email: "admin@example.com",
-        password: "password",
-        approved: true
+        approved: true,
+        email: "user@example.com",
+        first_name: "First",
+        id: 1,
+        last_name: "Last",
+        password: "12345678",
+        password_confirmation: "12345678",
       )
     end
   end
