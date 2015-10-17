@@ -5,13 +5,13 @@ class HeroLinks
     @bindEvents()
 
   bindEvents: ->
-    @$links.hover(@remove, @add)
+    @$links.hover(@add, @remove)
 
   remove: =>
-    @$activeLinks.removeClass("active")
+    $("body").removeClass("active")
 
   add: =>
-    @$activeLinks.addClass("active")
-    
+    $("body").addClass("active")
+
 $ ->
   new HeroLinks($(".hero-intro__links"))

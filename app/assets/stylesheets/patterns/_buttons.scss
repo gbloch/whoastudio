@@ -28,9 +28,18 @@
   font-weight: 300;
   text-transform: uppercase;
 
-  &.active,
+  &.active {
+    border-color: $teal;
+    background-color: $teal;
+  }
+
+  .active & {
+    border-color: rgba(white, 0.25);
+    background-color: transparent;
+  }
+
   &:hover {
-    border: solid 2px $teal;
+    border-color: $teal;
     background-color: $teal;
   }
 }
