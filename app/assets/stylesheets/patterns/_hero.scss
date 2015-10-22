@@ -5,8 +5,7 @@
   z-index: 1;
 
   @include media($medium-screen) {
-    min-width: 320px;
-    max-width: 480px;
+    max-width: 70vw;
     padding: 0;
     width: 50%;
   }
@@ -14,7 +13,7 @@
 
 .hero-background {
   @include position(absolute, 0px 0px 0px 0px);
-  background-image: image-url("mountain-sharp.jpg");
+  background-image: image-url("landscape_in_mist.jpg");
   background-size: cover;
 }
 
