@@ -12,6 +12,7 @@
             %h1.post__title
               = post.title
           .post__byline
+            = post_author_gravatar(post)
             = post_author_full_name(post, class: "post__byline__author")
             .post__byline__date
               = post.published_at_fulldate
