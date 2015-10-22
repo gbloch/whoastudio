@@ -8,13 +8,24 @@ if Rails.env.development?
 
       create(
         :post,
-        body: File.read(Rails.root.join("lib", "tasks", "seed_post.md")),
+        body: File.read(Rails.root.join("lib", "seed_helpers", "post.md")),
         created_at: Time.now,
         feature_image_file_name: "ruby.png",
         feature_image_content_type: "image/png",
         published: true,
         published_at: Time.now,
         title: "This is a Seed!",
+      )
+
+      create(
+        :post,
+        body: File.read(Rails.root.join("lib", "seed_helpers", "post_with_long_title.md")),
+        created_at: Time.now,
+        feature_image_file_name: "haml.png",
+        feature_image_content_type: "image/png",
+        published: true,
+        published_at: Time.now,
+        title: "Hmm, this is a post about Haml that has a very long title",
       )
 
       create(
