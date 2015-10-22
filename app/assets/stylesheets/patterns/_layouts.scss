@@ -6,6 +6,7 @@ body, html {
 
 .layout {
   @include transition(all .5s ease);
+  padding-top: 2rem;
 
   @include media($large-screen) {
     .expanded & {
@@ -17,7 +18,8 @@ body, html {
 .layout--medium {
   margin: 0 auto;
   max-width: $medium-screen;
-  padding: 0 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 
   .expanded & {
     max-width: $large-screen;
