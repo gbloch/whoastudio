@@ -41,10 +41,10 @@
 
 .post__image {
   @include transition(height 0.5s, width 0.5s);
-  @include size(auto 10rem);
+  @include size(auto 6rem);
 
   @include media($small-screen) {
-    @include size(auto 20rem);
+    @include size(auto 10rem);
   }
 }
 
@@ -57,20 +57,21 @@
 .post__title {
   color: $base-font-color;
   font-family: $sans-serif;
-  line-height: 1;
+  font-size: 2rem;
+  line-height: 1.125;
   margin: 1rem 0;
   text-align: center;
+  text-transform: uppercase;
   width: 100%;
 }
 
 .post__title--large {
   @include transition(font-size 0.5s);
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin: 2rem 0;
 
   @include media($small-screen) {
-    font-size: 4rem;
-    letter-spacing: -0.125rem;
+    font-size: 5rem;
     margin: 2rem 0;
   }
 }
@@ -90,7 +91,12 @@
 }
 
 .post__body {
-  @include transition(font-size, 0.5s, padding 0.5s);
+  margin: 0 auto;
+  max-width: $medium-screen;
+
+  .expanded & {
+    max-width: $large-screen;
+  }
 
   h1,
   h2,
@@ -104,7 +110,7 @@
   h2 {
     margin-top: 4rem;
   }
-  
+
   a {
     color: $base-link-color;
     font-weight: 700;
@@ -114,7 +120,7 @@
     background: $code-background-color;
     border-radius: 4px;
     font-family: $code-font-family;
-    font-size: $base-font-size; 
+    font-size: $base-font-size;
     letter-spacing: -0.0375rem;
     line-height: 1.4;
     margin: ($base-paragraph-margin * 2) 0;
