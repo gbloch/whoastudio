@@ -4,19 +4,5 @@
   %section.posts--list
     %ul
       - @posts.each do |post|
-        - post = PostPresenter.new(post)
-        %li
-          %article
-            = image_tag post.feature_image.url, class: "post__feature-thumbnail"
-            = link_to post do
-              %h1.post__title
-                = post.title
-            .post__byline
-              = post_author_full_name(post, class: "post__byline__author")
-              .post__byline__date
-                = post.published_at_fulldate
-            .post__body.post__body--summary
-              = strip_tags(post.body_summary_html)
-            %div.post__read-more
-              = link_to post, class: "button" do
-                read more
+        = render partial: "post_summary",
+          locals: { post: PostPresenter.new(post) }
