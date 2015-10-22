@@ -61,7 +61,7 @@ $base-font-color: $dark-gray;
 $secondary-font-color: lighten($dark-gray, 25);
 
 // Text Link Colors
-$base-link-color: darken(mix($base-accent-color, $blue, 40%), 15%);
+$base-link-color: darken($base-accent-color, 5);
 $hover-link-color: darken($base-accent-color, 15);
 
 // Code Colors

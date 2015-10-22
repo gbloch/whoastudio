@@ -4,15 +4,6 @@
   max-width: $medium-screen;
   margin: 1em auto;
 
-  li {
-    list-style-type: none;
-    padding: 4em 0;
-  }
-
-  li + li {
-    border-top: solid 1px $light-gray;
-  }
-
   @include media($small-screen) {
     margin: 4em auto;
   }
@@ -24,6 +15,19 @@
   .expanded & {
     padding: 0 2rem;
   }
+
+  li {
+    list-style-type: none;
+    padding: 4em 0;
+  }
+
+  li:first-of-type {
+    padding-top: 0;
+  }
+
+  li + li {
+    border-top: solid 1px $light-gray;
+  }
 }
 
 .post__read-more {
@@ -31,8 +35,8 @@
 }
 
 .post__image-wrapper {
-  text-align: center;
   margin-top: 2rem;
+  text-align: center;
 
   @include media($small-screen) {
     margin-top: 4rem;

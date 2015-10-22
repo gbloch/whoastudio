@@ -1,13 +1,66 @@
+a {
+  @include transition(color 0.1s linear);
+  color: $base-link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $hover-link-color;
+  }
+
+  &:active, &:focus {
+    outline: none;
+  }
+}
+
 body {
   color: $base-font-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
-  -webkit-font-smoothing: antialiased;
   line-height: $base-line-height;
 
   @include media($xx-large-screen) {
     font-size: $base-font-size * 1.15;
   }
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted $base-border-color;
+  cursor: help;
+}
+
+address {
+  display: block;
+  margin: 0 0 ($base-line-height / 2);
+}
+
+blockquote {
+  margin: 3rem 0;
+  padding-left: 1rem;
+  border-left: solid 0.25rem $light-gray;
+  color: lighten($base-font-color, 35%);
+}
+
+cite {
+  color: lighten($base-font-color, 25);
+  font-style: italic;
+
+  &:before {
+    content: '\2014 \00A0';
+  }
+}
+
+code {
+  background: $code-background-color;
+  border-radius: 4px;
+  border: solid 1px darken($code-background-color, 2%);
+  color: darken($medium-gray, 15%);
+  font-family: $code-font-family;
+  padding: $base-padding / 4 $base-padding / 2;
+}
+
+del {
+  color: lighten($base-font-color, 15);
 }
 
 h1,
@@ -25,34 +78,9 @@ h6 {
   }
 }
 
-p {
-  margin: 0 0 $base-line-height;
-  line-height: $base-line-height;
+hgroup {
+  margin-bottom: $base-line-height / 2;
 }
-
-a {
-  @include transition(color 0.1s linear);
-  color: $base-link-color;
-  text-decoration: none;
-
-  &:hover {
-    color: $hover-link-color;
-  }
-
-  &:active, &:focus {
-    outline: none;
-  }
-}
-
-code {
-  background: $code-background-color;
-  border-radius: 4px;
-  border: solid 1px darken($code-background-color, 2%);
-  color: darken($medium-gray, 15%);
-  font-family: $code-font-family;
-  padding: $base-padding / 4 $base-padding / 2;
-}
-
 
 hr {
   border-bottom: 1px solid $base-border-color;
@@ -67,36 +95,12 @@ img {
   max-width: 100%;
 }
 
-abbr, acronym {
-  border-bottom: 1px dotted $base-border-color;
-  cursor: help;
+p {
+  margin: 0 0 $base-line-height;
+  line-height: $base-line-height;
 }
 
-address {
-  display: block;
-  margin: 0 0 ($base-line-height / 2);
-}
-
-hgroup {
-  margin-bottom: $base-line-height / 2;
-}
-
-del {
-  color: lighten($base-font-color, 15);
-}
-
-blockquote {
-  margin: 3rem 0;
-  padding-left: 1rem;
-  border-left: solid 0.25rem $light-gray;
-  color: lighten($base-font-color, 35%);
-}
-
-cite {
-  color: lighten($base-font-color, 25);
-  font-style: italic;
-
-  &:before {
-    content: '\2014 \00A0';
-  }
+ul {
+  margin: 0;
+  padding: 0;
 }
