@@ -31,7 +31,7 @@ if Rails.env.development?
       create(
         :admin,
         approved: true,
-        email: "user@example.com",
+        email: "ramirez676@gmail.com",
         first_name: "First",
         id: 1,
         last_name: "Last",
