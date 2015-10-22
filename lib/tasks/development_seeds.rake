@@ -13,7 +13,7 @@ if Rails.env.development?
         last_name: "Last",
       )
 
-      create(:post, admin_id: admin.id)
+      create(:post, feature_image_file_name: "ruby.png", admin_id: admin.id)
       create(
         :post,
         feature_image_file_name: "haml.png",

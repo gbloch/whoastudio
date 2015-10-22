@@ -1,7 +1,7 @@
 require "spec_helper"
 
 RSpec.feature "guest views works" do
-  scenario "fromt the landing page" do
+  xscenario "fromt the landing page" do
     visit root_path
     click_link "works"
 

@@ -7,16 +7,17 @@ FactoryGirl.define do
     body File.read(Rails.root.join("lib", "seed_helpers", "post.md"))
     created_at Time.now
     feature_image_content_type "image/png"
-    feature_image_file_name "ruby.png"
-    published "true"
+    published true
     published_at Time.now
     title "Post Title!"
   end
 
   factory :admin do
+    approved "true"
     email "admin@example.com"
+    first_name "Firstname"
+    last_name "Lastname"
     password "password"
     password_confirmation "password"
-    approved "true"
   end
 end
