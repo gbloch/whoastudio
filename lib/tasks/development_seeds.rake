@@ -6,37 +6,18 @@ if Rails.env.development?
     task prime: "db:setup" do
       include FactoryGirl::Syntax::Methods
 
-      create(
-        :post,
-        body: File.read(Rails.root.join("lib", "seed_helpers", "post.md")),
-        created_at: Time.now,
-        feature_image_file_name: "ruby.png",
-        feature_image_content_type: "image/png",
-        published: true,
-        published_at: Time.now,
-        title: "This is a Seed!",
-      )
-
-      create(
-        :post,
-        body: File.read(Rails.root.join("lib", "seed_helpers", "post_with_long_title.md")),
-        created_at: Time.now,
-        feature_image_file_name: "haml.png",
-        feature_image_content_type: "image/png",
-        published: true,
-        published_at: Time.now,
-        title: "Hmm, this is a post about Haml that has a very long title",
-      )
-
-      create(
+      admin = create(
         :admin,
-        approved: true,
         email: "ramirez676@gmail.com",
         first_name: "First",
-        id: 1,
         last_name: "Last",
-        password: "12345678",
-        password_confirmation: "12345678",
+      )
+
+      create(:post, admin_id: admin.id)
+      create(
+        :post,
+        feature_image_file_name: "haml.png",
+        title: "Hmm, this is a post about Haml that has a very long title",
       )
     end
   end
