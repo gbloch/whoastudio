@@ -44,7 +44,7 @@
   @include size(auto 6rem);
 
   @include media($small-screen) {
-    @include size(auto 10rem);
+    @include size(auto 16rem);
   }
 }
 
