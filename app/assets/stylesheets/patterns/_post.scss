@@ -127,6 +127,11 @@
     overflow-x: scroll;
     padding: $base-padding;
 
+    code {
+      background-color: transparent;
+      border: none;
+    }
+
     @include media($xx-large-screen) {
       font-size: $base-font-size * 1.15;
     }

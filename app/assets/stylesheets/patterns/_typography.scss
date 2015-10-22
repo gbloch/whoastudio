@@ -45,15 +45,12 @@ a {
 }
 
 code {
-  background: lighten($light-gray, 10%);
+  background: $code-background-color;
   border-radius: 4px;
+  border: solid 1px darken($code-background-color, 2%);
   color: darken($medium-gray, 15%);
   font-family: $code-font-family;
-  padding: $base-padding / 4;
-
-  @include media($xx-large-screen) {
-    font-size: $code-font-size * 1.15;
-  }
+  padding: $base-padding / 4 $base-padding / 2;
 }
 
 
