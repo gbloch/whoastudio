@@ -4,9 +4,11 @@
   border: solid 2px $base-button-background-color;
   color: $base-button-color;
   display: inline-block;
-  font-family: $button-font-family;
+  font-family: $header-font-family;
   font-size: $base-font-size;
   padding: 0.25rem 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
 
   &:hover {
     background-color: $base-button-background-color;
@@ -24,9 +26,6 @@
   background-color: transparent;
   border-color: rgba(white, 0.25);
   color: white;
-  font-family: $header-font-family;
-  font-weight: 300;
-  text-transform: uppercase;
 
   &.active {
     border-color: $teal;
