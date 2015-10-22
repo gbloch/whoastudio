@@ -14,15 +14,6 @@ body, html {
   }
 }
 
-.layout-hero--cover {
-  @include size(100% 100vh);
-  @include display(flex);
-  @include align-items(center);
-  @include justify-content(center);
-  overflow: hidden;
-  position: relative;
-}
-
 .layout--medium {
   margin: 0 auto;
   max-width: $medium-screen;
