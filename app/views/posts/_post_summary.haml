@@ -1,6 +1,7 @@
 %li
   %article
-    = image_tag post.feature_image.url, class: "post__feature-thumbnail"
+    - if post.feature_image.exists?
+      = image_tag post.feature_image.url, class: "post__feature-thumbnail"
     = link_to post do
       %h1.post__title
         = post.title

@@ -3,8 +3,9 @@
     = f.input :title
     = f.label "Feature image"
     .card
-      = image_tag @post.feature_image.url
-      = f.file_field :feature_image 
+      - if @post.feature_image.exists?
+        = image_tag @post.feature_image.url
+      = f.file_field :feature_image
     = f.input :body
     = f.button :submit, class: "button"
   %aside.post__aside

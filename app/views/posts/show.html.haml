@@ -1,7 +1,8 @@
 %main.layout.layout--large
   %article.post
     .post__image-wrapper
-      = image_tag @post.feature_image.url, class: "post__image"
+      - if @post.feature_image.exists?
+        = image_tag @post.feature_image.url, class: "post__image"
     %h1.post__title.post__title--large
       = @post.title
     .post__byline
