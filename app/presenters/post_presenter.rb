@@ -24,7 +24,7 @@ class PostPresenter < SimpleDelegator
   end
 
   def body_summary_html
-    body_as_string.truncate(240)
+    ActionController::Base.helpers.strip_tags(body_as_string).truncate(240)
   end
 
   def published_at_formatted
