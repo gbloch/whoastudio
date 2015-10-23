@@ -1,9 +1,6 @@
 = simple_form_for [:admins, @post] do |f|
-  %section.layout{ data: { "edit-post" => true } }
-    %header.layout__content--centered
-
   %section.layout
-    %header.layout__content--centered
+    %header.content
       = image_tag @post.feature_image.url, class: "edit-post__image"
       = f.file_field :feature_image
       = f.input :title, label: false, input_html: { class: "edit-post__title" }
@@ -19,7 +16,7 @@
       = f.button :submit, class: "button"
 
   %section.layout.layout--white
-    %article.layout__content--centered
+    %article.content
       = f.input :body,
         label: false,
         input_html: { class: "edit-post__body", data: { "flexible-textarea" => true } }

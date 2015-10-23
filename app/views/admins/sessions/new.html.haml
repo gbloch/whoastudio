@@ -1,13 +1,15 @@
-%main.layout.layout--medium
-  %h2
-    Sign in
+%main.layout
+  %section.content.content--padded-top
+    %h2
+      Sign in
 
-  = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-    = f.input :email, input_html: { class: "input--default"}, autofocus: true
-    = f.input :password, input_html: { class: "input--default"}
-    = f.input :remember_me, 
-      as: :boolean if devise_mapping.rememberable?
-    = f.button :submit, "Sign in",
-      class: "button"
+    = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      = f.input :email, input_html: { class: "input--default"}, autofocus: true
+      = f.input :password, input_html: { class: "input--default"}
+      = f.input :remember_me,
+        as: :boolean if devise_mapping.rememberable?
+      = f.button :submit, "Sign in",
+        class: "button"
 
-  = render "admins/shared/links"
+  %section.content.content--padded-top
+    = render "admins/shared/links"

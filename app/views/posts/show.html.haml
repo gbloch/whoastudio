@@ -1,6 +1,6 @@
 %main.layout
   %article
-    %header.layout__content--centered
+    %header.content
       = image_tag @post.feature_image.url, class: "post__image"
       %h1.post__title.post__title--large
         = @post.title
@@ -9,7 +9,7 @@
         = post_author_full_name(@post, class: "post__byline__author")
         %small.post__byline__date
           = @post.published_at_fulldate
-    %section.layout__content--centered.layout__content--medium
+    %section.content.content--medium
       .post__body.post__body--full
         = preserve do
           = raw @post.body_as_string

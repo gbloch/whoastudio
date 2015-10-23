@@ -1,0 +1,17 @@
+.content {
+  @include padding(null 1rem null 1rem);
+  margin: 0 auto;
+  max-width: $large-screen;
+}
+
+.content--medium {
+  max-width: $medium-screen;
+
+  @include media($xx-large-screen) {
+    max-width: $large-screen;
+  }
+}
+
+.content--padded-top {
+  padding-top: $base-content-padding;
+}
