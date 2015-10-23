@@ -12,23 +12,22 @@ RSpec.feature "Admin edits a post" do
     end
 
     scenario "with all requirements" do
-      fill_in "Title", with: "New Title"
-      within ".post__aside" do
+      fill_in "post_title", with: "New Title"
+      within ".edit_post header" do
         click_button "Update Post"
       end
 
-      expect(page).to have_content "Edit Post"
       expect(page).to have_selector("input[value='New Title']")
     end
 
     scenario "with no title" do
-      fill_in "Title", with: ""
-      within ".post__aside" do
+      fill_in "post_title", with: ""
+      within ".edit_post header" do
         click_button "Update Post"
       end
 
       expect(page).to have_content "Edit Post"
-      expect(page).to have_content("Titlecan't be blank")
+      expect(page).to have_content("can't be blank")
     end
   end
 end

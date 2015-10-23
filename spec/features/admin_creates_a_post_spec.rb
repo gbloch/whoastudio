@@ -6,8 +6,8 @@ RSpec.feature "Admin creates a post" do
     login_as(admin, scope: :admin)
 
     visit new_admins_post_path
-    fill_in "Title", with: "Fake title"
-    within ".post__aside" do
+    fill_in "post_title", with: "Fake title"
+    within ".new_post header" do
       click_button "Create Post"
     end
 
@@ -20,11 +20,11 @@ RSpec.feature "Admin creates a post" do
     login_as(admin, scope: :admin)
 
     visit new_admins_post_path
-    fill_in "Title", with: ""
-    within ".post__aside" do
+    fill_in "post_title", with: ""
+    within ".new_post header" do
       click_button "Create Post"
     end
 
-    expect(page).to have_content "New Post"
+    expect(page).to have_content "can't be blank"
   end
 end
