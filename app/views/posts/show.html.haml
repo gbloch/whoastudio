@@ -9,7 +9,7 @@
         = post_author_full_name(@post, class: "post__byline__author")
         %small.post__byline__date
           = @post.published_at_fulldate
-    %section.layout__content--centered
+    %section.layout__content--centered.layout__content--medium
       .post__body.post__body--full
         = preserve do
           = raw @post.body_as_string

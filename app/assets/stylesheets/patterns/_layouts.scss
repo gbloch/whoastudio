@@ -27,6 +27,10 @@ html {
   max-width: $large-screen;
 }
 
+.layout__content--medium {
+  max-width: $medium-screen;
+}
+
 .layout__section {
   padding: $base-section-padding;
 }
