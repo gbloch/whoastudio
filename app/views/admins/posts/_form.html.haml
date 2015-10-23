@@ -1,20 +1,22 @@
 = simple_form_for [:admins, @post] do |f|
-  %section.layout.edit-post
+  %section.layout{ data: { "edit-post" => true } }
     %header.layout__content--centered
+
+  %section.layout
+    %header.layout__content--centered
+      = image_tag @post.feature_image.url, class: "edit-post__image"
+      = f.file_field :feature_image
       = f.input :title, label: false, input_html: { class: "edit-post__title" }
 
-      .edit-post__image
-        = image_tag @post.feature_image.url
-        = f.file_field :feature_image
-
-      %aside.edit-post__meta
+      .edit-post__meta
         = f.input :published, as: :select
         = f.input :published_at, as: :date
         = f.association :admin,
-          value_method: :id,
-          label_method: :email,
-          label: "Author"
-        = f.button :submit, class: "button"
+            value_method: :id,
+            label_method: :email,
+            label: "Author"
+
+      = f.button :submit, class: "button"
 
   %section.layout.layout--white
     %article.layout__content--centered

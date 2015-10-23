@@ -3,13 +3,17 @@
   background-color: transparent;
   border-bottom: solid 1px $light-gray;
   font-size: $base-font-size * 2;
-  margin-top: 6rem;
+  margin-top: 2rem;
   padding: 0.25rem;
   width: 100%;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .edit-post__image {
-  display: none;
+  max-height: 200px;
 }
 
 .edit-post__body {
@@ -21,5 +25,15 @@
 
   &:focus {
     outline: none;
+  }
+}
+
+.edit-post__meta {
+  @include margin(2rem null 2rem null);
+  line-height: 1;
+
+  label {
+    display: inline-block;
+    margin-right: 1rem;
   }
 }
