@@ -1,7 +1,8 @@
 .navigation__drawer {
   @include transition(all .5s ease);
   @include position(fixed, 0px null 0px -100%);
-  background: rgba(white, 0.8);
+  box-shadow: 0 2px 1rem rgba(black, 0.125);
+  background: rgba(white, 0.95);
   padding: 5em 1em;
   width: 100%;
   z-index: 2;
@@ -13,6 +14,11 @@
 
   ul {
     list-style: none;
+  }
+
+  li:first-of-type {
+    padding-top: 2rem;
+    border-top: solid 1px $base-border-color;
   }
 
   .expanded & {
@@ -74,9 +80,4 @@
   font-size: $base-font-size;
   text-transform: uppercase;
   width: 100%;
-
-  &:first-of-type {
-    padding-top: 2rem;
-    border-top: solid 1px $base-border-color;
-  }
 }
