@@ -29,6 +29,10 @@ html {
 
 .layout__content--medium {
   max-width: $medium-screen;
+
+  @include media($xx-large-screen) {
+    max-width: $large-screen;
+  }
 }
 
 .layout__section {

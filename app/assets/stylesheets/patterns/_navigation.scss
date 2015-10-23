@@ -69,7 +69,14 @@
 
 .navigation__link {
   color: black;
+  display: inline-block;
   font-family: $header-font-family;
   font-size: $base-font-size;
   text-transform: uppercase;
+  width: 100%;
+
+  &:first-of-type {
+    padding-top: 2rem;
+    border-top: solid 1px $base-border-color;
+  }
 }
