@@ -20,5 +20,9 @@ form {
     line-height: 1.7;
     padding: 0.5rem;
     width: 100%;
+
+    &:focus {
+      outline-color: $teal;
+    }
   }
 }
