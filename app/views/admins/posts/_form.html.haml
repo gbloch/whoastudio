@@ -4,7 +4,6 @@
       = f.input :title, label: false, input_html: { class: "edit-post__title" }
 
       .edit-post__image
-        = f.label "Feature image"
         = image_tag @post.feature_image.url
         = f.file_field :feature_image
 
@@ -19,5 +18,7 @@
 
   %section.layout.layout--white
     %article.layout__content--centered
-      = f.input :body, input_html: { class: "edit-post__body" }
+      = f.input :body,
+        label: false,
+        input_html: { class: "edit-post__body", data: { "flexible-textarea" => true } }
       = f.button :submit, class: "button"
