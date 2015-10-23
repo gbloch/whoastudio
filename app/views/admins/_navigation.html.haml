@@ -2,6 +2,8 @@
   %a{class: "navigation__trigger #{@navigation_state}", href: "#"}
     .icon.icon--menu
     .icon.icon--plus-sign
+    %span
+      Menu
   %nav.navigation__drawer{ class: @navigation_state }
     %ul
       - if !admin_signed_in?
@@ -16,14 +18,14 @@
             class: "navigation__link"
         %li
           = link_to "Edit Posts",
-            admins_posts_path, 
+            admins_posts_path,
             class: "navigation__link"
         %li
           = link_to "Account Settings",
             edit_admin_registration_path,
             class: "navigation__link"
         %li
-          = link_to "Logout", 
-            destroy_admin_session_path, 
+          = link_to "Logout",
+            destroy_admin_session_path,
             method: :delete,
             class: "navigation__link"
