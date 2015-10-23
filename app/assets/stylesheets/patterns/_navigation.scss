@@ -1,7 +1,7 @@
 .navigation__drawer {
   @include transition(all .5s ease);
   @include position(fixed, 0px null 0px -100%);
-  background: rgba(black, 0.8);
+  background: rgba(white, 0.8);
   padding: 5em 1em;
   width: 100%;
   z-index: 2;
@@ -21,41 +21,55 @@
 }
 
 .navigation__trigger {
-  @include position(fixed, .5em null null .5em);
-  @include size(2rem);
+  @include position(fixed, 1rem null null 1rem);
   @include transition(all 0.5s ease);
-  background-color: rgba(black, 0.125);
-  border-radius: 100px;
-  padding: 0.5rem;
+  color: black;
+  font-family: $header-font-family;
+  font-size: $base-font-size;
   text-align: center;
-  z-index: 99;
+  text-transform: uppercase;
+  z-index: 9;
+
+  & > * {
+    vertical-align: middle;
+  }
+
+  &:hover {
+    color: black;
+    opacity: 0.6;
+  }
 
   .icon {
     @include transition(all 0.5s ease);
+    margin-right: 0.25rem;
   }
 
   .icon--plus-sign {
-    background-size: 0%
+    @include position(absolute, 0.5rem null null 0px);
+    background-size: 0%;
   }
 
   .icon--menu {
     background-size: 1rem;
   }
 
-  .expanded & {
+
+  .expanded & .icon {
     @include transform(rotate(135deg));
 
-    .icon--menu {
+    &.icon--menu {
       background-size: 0%
     }
 
-    .icon--plus-sign {
+    &.icon--plus-sign {
       background-size: 1rem;
     }
   }
 }
 
 .navigation__link {
-  color: white;
+  color: black;
   font-family: $header-font-family;
+  font-size: $base-font-size;
+  text-transform: uppercase;
 }
