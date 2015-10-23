@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
   belongs_to :admin
 
   validates :title, presence: true
-  
+
   friendly_id :title, use: :slugged
   has_attached_file(
     :feature_image,
