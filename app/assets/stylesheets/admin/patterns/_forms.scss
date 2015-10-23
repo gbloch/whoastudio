@@ -1,6 +1,6 @@
 form {
   button,
-  input[type="file"] { 
+  input[type="file"] {
     display: block;
   }
 
@@ -10,16 +10,16 @@ form {
     font-size: $label-font-size;
   }
 
-  textarea,
-  input[type="text"],
-  input[type="password"],
-  input[type="email"] {
-    border: solid 1px $light-gray;
-    box-shadow: none;
-    display: block;
-    font-size: $base-font-size;
-    line-height: 1.7;
-    padding: 0.5rem;
-    width: 100%;
-  }
+  // textarea,
+  // input[type="text"],
+  // input[type="password"],
+  // input[type="email"] {
+  //   border: solid 1px $light-gray;
+  //   box-shadow: none;
+  //   display: block;
+  //   font-size: $base-font-size;
+  //   line-height: 1.7;
+  //   padding: 0.5rem;
+  //   width: 100%;
+  // }
 }

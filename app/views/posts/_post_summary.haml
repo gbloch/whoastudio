@@ -1,16 +1,19 @@
-%li
+%li.post-list
   %article
-    - if post.feature_image.exists?
-      = image_tag post.feature_image.url, class: "post__feature-thumbnail"
-    = link_to post do
-      %h1.post__title
-        = post.title
-    .post__byline
-      = post_author_full_name(post, class: "post__byline__author")
-      .post__byline__date
-        = post.published_at_fulldate
-    .post__body.post__body--summary
-      = strip_tags(post.body_summary_html)
-    %div.post__read-more
-      = link_to post, class: "button" do
-        read more
+    %header
+      = image_tag post.feature_image.url, class: "post__image post__image--thumbnail"
+      = link_to post do
+        %h1.post__title
+          = post.title
+      .post__byline
+        = post_author_full_name(post, class: "post__byline__author")
+        %small.post__byline__date
+          = post.published_at_fulldate
+
+    %section
+      .post__body.post__body--summary
+        = strip_tags(post.body_summary_html)
+
+  .post-list__read-more
+    = link_to post, class: "button" do
+      read more

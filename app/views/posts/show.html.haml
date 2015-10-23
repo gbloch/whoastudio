@@ -1,16 +1,15 @@
-%main.layout.layout--large
-  %article.post
-    .post__image-wrapper
-      - if @post.feature_image.exists?
-        = image_tag @post.feature_image.url, class: "post__image"
-    %h1.post__title.post__title--large
-      = @post.title
-    .post__byline
-      = post_author_gravatar(@post)
-      .post__byline__author
-        = "By #{@post.author_full_name}"
-      .post__byline__date
-        = @post.published_at_fulldate
-    .post__body.post__body--full
-      = preserve do
-        = raw @post.body_as_string
+%main.layout
+  %article
+    %header.layout__content--centered
+      = image_tag @post.feature_image.url, class: "post__image"
+      %h1.post__title.post__title--large
+        = @post.title
+      .post__byline
+        = post_author_gravatar(@post)
+        = post_author_full_name(@post, class: "post__byline__author")
+        %small.post__byline__date
+          = @post.published_at_fulldate
+    %section.layout__content--centered
+      .post__body.post__body--full
+        = preserve do
+          = raw @post.body_as_string

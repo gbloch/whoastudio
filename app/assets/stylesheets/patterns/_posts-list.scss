@@ -1,0 +1,35 @@
+.posts--list {
+  @include transition(padding, 0.5s);
+  padding: 0 1rem;
+  max-width: $medium-screen;
+  margin: 1em auto;
+
+  @include media($small-screen) {
+    margin: 4em auto;
+  }
+
+  @include media($large-screen) {
+    padding: 0;
+  }
+
+  .expanded & {
+    padding: 0 2rem;
+  }
+
+  li {
+    list-style-type: none;
+    padding: 4em 0;
+  }
+
+  li:first-of-type {
+    padding-top: 0;
+  }
+
+  li + li {
+    border-top: solid 1px $light-gray;
+  }
+}
+
+.post-list__read-more {
+  text-align: center;
+}

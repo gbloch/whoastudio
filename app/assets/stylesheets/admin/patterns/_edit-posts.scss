@@ -1,0 +1,24 @@
+.posts__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.posts-table {
+  margin-top: 2rem;
+}
+
+.posts-table__col {
+  text-align: left;
+
+  &:nth-of-type(2) {
+    text-align: center;
+    width: 25%;
+  }
+
+  &:nth-of-type(3),
+  &:nth-of-type(4) {
+    text-align: center;
+    width: 10%;
+  }
+}

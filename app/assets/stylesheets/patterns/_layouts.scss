@@ -1,12 +1,14 @@
-body, html {
+body,
+html {
   background-color: $base-body-color;
   padding: 0px;
   margin: 0px;
 }
 
 .layout {
+  @include padding(2rem null 2rem null);
   @include transition(all .5s ease);
-  padding-top: 2rem;
+  overflow: hidden;
 
   @include media($large-screen) {
     .expanded & {
@@ -15,25 +17,14 @@ body, html {
   }
 }
 
-.layout--medium {
-  margin: 0 auto;
-  max-width: $medium-screen;
-  padding-left: 1rem;
-  padding-right: 1rem;
-
-  .expanded & {
-    max-width: $large-screen;
-  }
+.layout--white {
+  background-color: $white;
 }
 
-.layout--large {
+.layout__content--centered {
+  @include padding(null 1rem null 1rem);
   margin: 0 auto;
   max-width: $large-screen;
-  padding: 0 1rem;
-
-  .expanded & {
-    max-width: $x-large-screen;
-  }
 }
 
 .layout__section {
