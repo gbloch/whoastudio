@@ -4,8 +4,6 @@ Rails.application.routes.draw do
 
   root to: "posts#index"
 
-  post "set_navigation_state", to: "navigation#set_navigation_state"
-
   resources :posts, only: [:index, :show]
   resources :works, only: [:index]
 
