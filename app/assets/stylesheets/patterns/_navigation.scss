@@ -2,12 +2,12 @@
   @include transition(all .5s ease);
   @include position(fixed, 0px null 0px -100%);
   box-shadow: 0 2px 1rem rgba(black, 0.125);
-  background: rgba(white, 0.95);
+  background: $white;
   padding: 5em 1em;
   width: 100%;
   z-index: 2;
 
-  @include media($small-screen){
+  @include media($medium-screen){
     left: -$admin-nav-width;
     width: $admin-nav-width;
   }
@@ -27,48 +27,68 @@
 }
 
 .navigation__trigger {
-  @include position(fixed, 1rem null null 1rem);
-  @include transition(all 0.5s ease);
-  color: black;
+  @include position(fixed);
+  background: $white;
+  color: $black;
   font-family: $header-font-family;
   font-size: $base-font-size;
-  text-align: center;
   text-transform: uppercase;
+  transition: color 500ms;
+  padding: 1rem;
+  left: 0px;
+  right: 0px;
   z-index: 9;
 
-  & > * {
-    vertical-align: middle;
+  @include media($medium-screen) {
+    @include position(fixed);
+    background: transparent;
+    right: auto;
+    color: $white;
   }
 
   &:hover {
-    color: black;
-    opacity: 0.6;
+    color: $white;
   }
 
-  .icon {
-    @include transition(all 0.5s ease);
-    margin-right: 0.25rem;
+  * {
+    vertical-align: middle;
   }
 
-  .icon--plus-sign {
-    @include position(absolute, 0.5rem null null 0px);
-    background-size: 0%;
-  }
+  .menu {
+    transition: all 500ms;
 
-  .icon--menu {
-    background-size: 1rem;
-  }
-
-
-  .expanded & .icon {
-    @include transform(rotate(135deg));
-
-    &.icon--menu {
-      background-size: 0%
+    .expanded & {
+      transform: scale(0);
     }
+  }
 
-    &.icon--plus-sign {
-      background-size: 1rem;
+  .close {
+    position: absolute;
+    left: 1rem;
+    top: 22px;
+    transform: scale(0);
+    transition: all 500ms;
+
+    .expanded & {
+      transform: scale(1);
+    }
+  }
+
+  path {
+    transition: stroke 500ms;
+    stroke: $black;
+
+    @include media($medium-screen) {
+      stroke: $white;
+    }
+  }
+
+  .expanded &,
+  &.dark {
+    color: $black;
+
+    path {
+      stroke: $black;
     }
   }
 }
