@@ -1,5 +1,11 @@
 = render "hero"
 
-%main.layout.layout--medium
-  %section.layout__section
-    my works
+%main.layout
+  %section.content
+    %ul.works-list
+      %li.work
+        = link_to("http://prefab-patterns-marketplace.herokuapp.com", target: "_blank") do
+          = image_tag "work/prefab-landing-page.png"
+      %li.work
+        = link_to("https://github.com/jasonramirez/prefab-patterns", target: "_blank") do
+          = image_tag "work/prefab-gem.png"

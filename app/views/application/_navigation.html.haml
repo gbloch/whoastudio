@@ -1,14 +1,22 @@
 %header.navigation
   %a{class: "navigation__trigger", href: "#"}
-    .icon.icon--menu
-    .icon.icon--plus-sign
+    = inline_svg "icon-menu.svg", class: "menu"
+    = inline_svg "icon-close.svg", class: "close"
     %span
       Menu
   %nav.navigation__drawer
     %ul
       %li
-        = link_to "All Posts", root_path,
-          class: "navigation__link"
+        = link_to "Words",
+            posts_path,
+            anchor: "words",
+            class: "navigation__link"
+      %li
+        = link_to "Works",
+            works_path,
+            anchor: "words",
+            class: "navigation__link"
+
       - if admin_signed_in?
         %li
           = link_to "Edit Posts",

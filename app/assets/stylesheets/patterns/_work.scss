@@ -1,0 +1,10 @@
+.work {
+  list-style: none;
+  margin: 0 auto;
+  max-width: 360px;
+  padding: 1rem;
+
+  @include media($medium-screen) {
+    max-width: 49%;
+  }
+}

@@ -1,0 +1,5 @@
+.works-list {
+  @include media($medium-screen) {
+    display: flex;
+  }
+}
