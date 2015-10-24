@@ -56,6 +56,7 @@
 
   .menu {
     transition: all 500ms;
+    margin-right: 0.5rem;
 
     .expanded & {
       transform: scale(0);
