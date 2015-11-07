@@ -38,7 +38,6 @@ $red: #ED3B3B;
 $teal: darken(#52F7B3, 15%);
 $white: #fff;
 $yellow: #FFF24A;
-$yellow-beige: #F4F4F2;
 
 // Body Color
 $base-body-color: darken(white, 2%);
@@ -64,10 +63,10 @@ $secondary-font-color: lighten($dark-gray, 25);
 
 // Text Link Colors
 $base-link-color: darken($base-accent-color, 5);
-$hover-link-color: darken($base-accent-color, 15);
+$hover-link-color: $base-accent-color;
 
 // Code Colors
-$code-background-color: $yellow-beige;
+$code-background-color: $white;
 
 // Layout Variables
 $base-flash-padding: .5em;
