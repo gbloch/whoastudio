@@ -13,7 +13,7 @@
   &:hover {
     background-color: $base-button-background-color;
     cursor: pointer;
-    color: white;
+    color: $white;
   }
 
   &:hover,
@@ -22,10 +22,21 @@
   }
 }
 
+.button--cta {
+  border-color: $teal;
+  background-color: $teal;
+  color: $white;
+
+  &:hover {
+    border-color: $teal;
+    background-color: $teal;
+  }
+}
+
 .button--hero {
   background-color: transparent;
   border-color: rgba(white, 0.25);
-  color: white;
+  color: $white;
 
   &.active {
     border-color: $teal;

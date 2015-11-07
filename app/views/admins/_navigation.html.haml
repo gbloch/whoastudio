@@ -1,7 +1,7 @@
 %header.navigation
   %a{class: "navigation__trigger #{@navigation_state}", href: "#"}
-    .icon.icon--menu
-    .icon.icon--plus-sign
+    = inline_svg "icon-menu.svg", class: "menu"
+    = inline_svg "icon-close.svg", class: "close"
     %span
       Menu
   %nav.navigation__drawer{ class: @navigation_state }

@@ -9,15 +9,17 @@ if Rails.env.development?
       admin = create(
         :admin,
         email: "ramirez676@gmail.com",
+        password: "password",
         first_name: "First",
         last_name: "Last",
       )
 
-      create(:post, feature_image_file_name: "ruby.png", admin_id: admin.id)
+      create(:post, feature_image_file_name: "ruby.png", admin: admin)
       create(
         :post,
         feature_image_file_name: "haml.png",
         title: "Hmm, this is a post about Haml that has a very long title",
+        admin: admin
       )
     end
   end
