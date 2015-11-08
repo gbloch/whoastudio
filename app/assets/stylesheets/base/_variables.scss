@@ -22,7 +22,7 @@ $admin-nav-width: em(320);
 $base-font-size: 1rem;
 $base-line-height: 1.8;
 $base-border-radius: em(3);
-$label-font-size: $base-font-size * .85;
+$label-font-size: $base-font-size * .75;
 $small-font-size: $base-font-size * .85;
 $code-font-size: $base-font-size;
 
@@ -35,6 +35,7 @@ $light-gray: #DDD;
 $medium-gray: #999;
 $purple: #b630e4;
 $red: #ED3B3B;
+$salmon: #ff6174;
 $teal: darken(#52F7B3, 15%);
 $white: #fff;
 $yellow: #FFF24A;

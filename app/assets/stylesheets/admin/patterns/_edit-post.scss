@@ -1,10 +1,7 @@
-.edit-post__title {
-  border: none;
-  background-color: transparent;
-  border-bottom: solid 1px $light-gray;
-  font-size: $base-font-size * 2;
-  margin-top: 2rem;
-  padding: 0.25rem;
+.edit-post__title-input[type="text"] {
+  font-family: $sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
   width: 100%;
 
   &:focus {
@@ -13,15 +10,28 @@
 }
 
 .edit-post__image {
-  max-height: 200px;
+  @include size(5rem);
+  border: solid 1px $base-border-color;
+  border-radius: 2px;
+  cursor: pointer;
+  max-height: 100px;
+
+  &:hover {
+    box-shadow: 0 0 4px $base-accent-color;
+  }
 }
 
 .edit-post__body {
   border: none;
-  width: 100%;
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
+  width: 100%;
+
+  @include media($medium-screen) {
+    float: left;
+    width: 64%;
+  }
 
   &:focus {
     outline: none;
@@ -29,11 +39,39 @@
 }
 
 .edit-post__meta {
-  @include margin(2rem null 2rem null);
+  @include margin(0 null 2rem null);
+  border-bottom: solid 1px $base-border-color;
   line-height: 1;
+  padding-bottom: 2rem;
+
+  @include media($medium-screen) {
+    float: right;
+    width: 20%;
+    min-width: 200px;
+  }
+
+  .input {
+    margin-bottom: 2.5rem;
+  }
+
+  input[type="file"] {
+    display: none;
+  }
 
   label {
-    display: inline-block;
-    margin-right: 1rem;
+    color: $medium-gray;
+  }
+
+  select {
+    margin-bottom: 0.5rem;
+    margin-left: -0.5rem;
+  }
+
+  input[type="submit"] {
+    margin-top: 2rem;
+  }
+
+  @include media($medium-screen) {
+    border-bottom: none;
   }
 }

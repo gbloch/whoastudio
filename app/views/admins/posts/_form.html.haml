@@ -1,23 +1,34 @@
 = simple_form_for [:admins, @post] do |f|
   %section.layout
     %header.content
-      = image_tag @post.feature_image.url, class: "edit-post__image"
-      = f.file_field :feature_image
-      = f.input :title, label: false, input_html: { class: "edit-post__title" }
+      = f.input :title,
+          label: false,
+          input_html: { class: "input--line edit-post__title-input" }
 
-      .edit-post__meta
-        = f.input :published, as: :select
+  %section.layout.layout--white
+    %section.content
+      %aside.edit-post__meta
+        = f.input :published,
+            as: :boolean,
+            wrapper_html: { class: "checkbox--x-o" },
+            boolean_style: :inline
+        = f.file_field :feature_image,
+            data: { "image-select" => true }
         = f.input :published_at, as: :date
         = f.association :admin,
             value_method: :id,
             label_method: :email,
             label: "Author"
+        %label
+          Main Image
+        = image_tag @post.feature_image.url,
+          class: "edit-post__image",
+          data: { "image-select-trigger" => true }
 
-      = f.button :submit, class: "button"
+        = f.button :submit, class: "button button--cta"
 
-  %section.layout.layout--white
-    %article.content
-      = f.input :body,
-        label: false,
-        input_html: { class: "edit-post__body", data: { "flexible-textarea" => true } }
-      = f.button :submit, class: "button"
+      %article
+        = f.input :body,
+          label: false,
+          input_html: { class: "edit-post__body",
+            data: { "flexible-textarea" => true } }

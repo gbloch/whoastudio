@@ -1,28 +1,39 @@
-form {
-  button,
-  input[type="file"] {
-    display: block;
+button,
+input[type="file"] {
+  display: block;
+}
+
+label {
+  margin: 1rem 0 0.5rem;
+  display: block;
+  font-size: $label-font-size;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  border: solid 1px $light-gray;
+  box-shadow: none;
+  display: block;
+  font-size: $base-font-size;
+  line-height: 1.7;
+  padding: 0.5rem;
+  width: 100%;
+
+  &:focus {
+    outline-color: $teal;
   }
 
-  label {
-    margin: 1rem 0 0;
-    display: block;
-    font-size: $label-font-size;
+  &.input--line {
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1px $light-gray;
   }
+}
 
-  input[type="text"],
-  input[type="password"],
-  input[type="email"] {
-    border: solid 1px $light-gray;
-    box-shadow: none;
-    display: block;
-    font-size: $base-font-size;
-    line-height: 1.7;
-    padding: 0.5rem;
-    width: 100%;
-
-    &:focus {
-      outline-color: $teal;
-    }
-  }
+select {
+  border: none;
+  background: transparent;
+  font-size: $label-font-size;
+  font-family: $base-font-family;
 }
