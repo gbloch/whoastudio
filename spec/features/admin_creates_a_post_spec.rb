@@ -7,9 +7,7 @@ RSpec.feature "Admin creates a post" do
 
     visit new_admins_post_path
     fill_in "post_title", with: "Fake title"
-    within ".new_post header" do
-      click_button "Create Post"
-    end
+    click_button I18n.t("admins.posts.new.create_post")
 
     expect(page).to have_content "Fake title"
     expect(page).to have_content "All Posts"
@@ -21,9 +19,7 @@ RSpec.feature "Admin creates a post" do
 
     visit new_admins_post_path
     fill_in "post_title", with: ""
-    within ".new_post header" do
-      click_button "Create Post"
-    end
+    click_button t("admins.posts.new.create_post")
 
     expect(page).to have_content "can't be blank"
   end

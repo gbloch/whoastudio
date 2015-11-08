@@ -2,9 +2,9 @@
   .hero-intro
     = image_tag "whoa.svg", class: "logo"
     .hero-intro__links
-      = link_to "words",
+      = link_to t(".words"),
         posts_path(anchor: "words"),
         class: "button button--hero #{active_words_link}"
-      = link_to "work",
+      = link_to t(".work"),
         works_path(anchor: "work"),
         class: "button button--hero #{active_works_link}"

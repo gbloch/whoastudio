@@ -1,11 +1,10 @@
 require "spec_helper"
 
 RSpec.feature "guest views works" do
-  xscenario "fromt the landing page" do
+  scenario "from the landing page" do
     visit root_path
-    click_link "works"
+    click_link I18n.t("application.hero.work")
 
-    expect(page).to have_selector "a[href='#{works_path}'].active"
-    expect(page).to have_content "my works"
+    expect(page).to have_content I18n.t("works.index.heading")
   end
 end
