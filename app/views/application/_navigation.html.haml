@@ -19,9 +19,9 @@
 
       - if admin_signed_in?
         %li
-          = link_to "Edit Posts",
+          = link_to t(".all_posts"),
             admins_posts_path,
-            class: "navigation__link"
+            class: "navigation__link navigation__link--new-section"
         %li
           = link_to "Account Settings",
             edit_admin_registration_path,

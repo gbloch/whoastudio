@@ -3,7 +3,7 @@
   @include position(fixed, 0px null 0px -100%);
   box-shadow: 0 2px 1rem rgba(black, 0.125);
   background: $white;
-  padding: 5em 1em;
+  padding-top: 5em;
   width: 100%;
   z-index: 2;
 
@@ -17,8 +17,7 @@
   }
 
   li:first-of-type {
-    padding-top: 2rem;
-    border-top: solid 1px $base-border-color;
+    padding-top: 1rem;
   }
 
   .expanded & {
@@ -103,4 +102,10 @@
   font-size: $base-font-size;
   text-transform: uppercase;
   width: 100%;
+  padding: 1rem;
+}
+
+.navigation__link--new-section {
+  margin-top: 1rem;
+  padding-top: 2rem;
 }

@@ -13,6 +13,7 @@ en:
   admins:
     posts:
       index:
+        all_posts: "All Posts"
         new_post: "New Post"
       new:
         create_post: "Create Post"
@@ -23,6 +24,8 @@ en:
     hero:
       work: "Work"
       words: "Words"
+    navigation:
+      all_posts: "All Posts"
 
   works:
     index:

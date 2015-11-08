@@ -22,7 +22,7 @@ RSpec.feature "Admin edits a post" do
       fill_in "post_title", with: ""
       click_button I18n.t("admins.posts.show.update_post")
 
-      expect(page).to have_content "Edit Post"
+      expect(page).to have_content I18n.t("admins.posts.index.all_posts")
       expect(page).to have_content("can't be blank")
     end
   end
